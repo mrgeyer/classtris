@@ -44,7 +44,7 @@ table {
     border-spacing: 5px;
 	background-color: #333333;
 }
-button {
+.CTbutton {
     background-color: #000000;
     border: none;
     color: white;
