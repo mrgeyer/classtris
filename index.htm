@@ -59,7 +59,7 @@ button {
 		</td>
 	</td></tr>
 		
-		<tr><td><button onclick="cycleNext(Number(0))">NEXT</button></td>
+		<tr><td><button onclick="cycleNext()">NEXT</button></td>
 <!--
 		<td><form>
 		<input type="file" id="classList" colspan=2 required>
@@ -77,8 +77,8 @@ button {
 	var xp = [];
 	for (var i = 0; i < currentClass.length; i++) {
 		xp.push(0);
-	*/
 	}
+	*/
 
 		xp = [];
 		for (var i = 0; i < currentClass.length; i++) {
@@ -99,7 +99,7 @@ button {
 		document.getElementById('then2').innerHTML = up[3];
 
 
-	function cycleNext(xpee) {
+	function cycleNext() {
 		/*
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
