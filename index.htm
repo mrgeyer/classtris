@@ -45,7 +45,6 @@ button {
 <body>
 <table >
 <tr>
-	
 
 	<th><table >
 	<tr><td ><h1>UP  </h1><h2 id="up"   > Up Dog     </h2> </td></tr>");
@@ -61,77 +60,52 @@ button {
 	</td></tr>
 		
 		<tr><td><button onclick="cycleNext(Number(0))">NEXT</button></td>
-
+<!--
 		<td><form>
 		<input type="file" id="classList" colspan=2 required>
-		<button onclick="loadFileAsText()">load class list</button></form></td>
+		<button onclick="loadFileAsText()">load class list</button></form></td> -->
 	</td></tr></table>
 
-<p id="loadText"></p>
-<p id="myArray"></p>
 
 <script>
-		// initialize.
-	/*
-	var currentClass = [];
-	var dynamicClass = [];
-	var up = [];
-	var xp = [];
+	// initialize.
+	var currentClass = ["Joe Bob", "Sarah", "Mike", "Ralph", "Donnie", "Leo", "Fred", "Jane"];
+	var dynamicClass = currentClass;
+	var up = ["Donnie", "Leo", "Fred", "Jane"];
 	var n = dynamicClass.length;
-	*/	/*
-	
+	/*
+	var xp = [];
 	for (var i = 0; i < currentClass.length; i++) {
 		xp.push(0);
-	}
 	*/
-
-function destroyClickedElement(event)
-{
-	document.body.removeChild(event.target);
-}
-
-function loadFileAsText()
-{
-    var fileToLoad = document.getElementById("classList").files[0];
-
-    var fileReader = new FileReader();
-    fileReader.onload = function(fileLoadedEvent) 
-    {
-        textFromFileLoaded = fileLoadedEvent.target.result;
-		
-    };
-	fileReader.readAsText(fileToLoad, "UTF-8");
-	currentClass = textFromFileLoaded .split("\n")
-
-	document.getElementById('myArray').innerHTML = currentClass;
-	document.getElementById('loadText').innerHTML = textFromFileLoaded;
-	document.getElementById('up').innerHTML = currentClass[0];
-	document.getElementById('next').innerHTML = currentClass[1];
-	document.getElementById('then1').innerHTML = currentClass[2];
-	document.getElementById('then2').innerHTML = currentClass[3];
-	/*
-	dynamicClass = currentClass;
-	dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-
-	n = dynamicClass.length;
-
-	for (var i = 0; i < 4; i++) {
-		up[i] = dynamicClass[0];
-		dynamicClass.shift();
 	}
-	document.getElementById('up').innerHTML = up[0];
-	document.getElementById('next').innerHTML = up[1];
-	document.getElementById('then1').innerHTML = up[2];
-	document.getElementById('then2').innerHTML = up[3];
-	*/	
-}
+
+		xp = [];
+		for (var i = 0; i < currentClass.length; i++) {
+			xp.push(0);
+		}
+		dynamicClass = currentClass;
+		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+
+
+		for (var i = 0; i < 4; i++) {
+			up[i] = dynamicClass[0];
+			dynamicClass.shift();
+		}
+
+		document.getElementById('up').innerHTML = up[0];
+		document.getElementById('next').innerHTML = up[1];
+		document.getElementById('then1').innerHTML = up[2];
+		document.getElementById('then2').innerHTML = up[3];
+
 
 	function cycleNext(xpee) {
-		/*		
+		/*
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
+
 		up.shift();
 		up[3] = dynamicClass[0];
 		dynamicClass.shift();
@@ -146,12 +120,29 @@ function loadFileAsText()
 		document.getElementById('then1').innerHTML = up[2];
 		document.getElementById('then2').innerHTML = up[3];
 	}
+/*
+function loadFileAsText()
+{
+    var fileToLoad = document.getElementById("classList").files[0];
+	
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent) 
+    {
+        textFromFileLoaded = fileLoadedEvent.target.result;
+		currentClass = textFromFileLoaded .split("\n");
+		loadUp();
+			
+    };
+    fileReader.readAsText(fileToLoad, "UTF-8");
 
-
+}
+*/
 
 
 </script>
 
+
+</script>
 </body>
 
 
