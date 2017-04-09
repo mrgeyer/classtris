@@ -1,106 +1,178 @@
+
+<!DOCTYPE html>
 <html>
-<style>
-body {
-	background-color: #333333;
-	}
-
-h1 { text-family: Arial, sans-serif;
-	font-size: 20px;
-	}
-
-h2 { text-family: Arial, sans-serif;
-	 color: red;
-	font-size: 20px;
-	}
-
-h3 { text-family: Arial, sans-serif;
-	 color: orange;
-	font-size: 20px;
-	}
-
-h4 { text-family: Arial, sans-serif;
-	 color: yellow;
-	font-size: 20px;
-	}
-
-h5 { text-family: Arial, sans-serif;
-	 color: magenta;
-	font-size: 20px;
-	}
-
-td {
-	text-align: center;
-    border: 10px solid gray;
-	border-style: double;
-    padding: 5px;
-	background-color: #000000;
-	color: #FFFFFF;
-}
-table {
-    border-spacing: 5px;
-	background-color: #333333;
-}
-button {
-
-}
-
-</style>
-
+  <head>
+    <meta charset="UTF-8">
+    <title>Classtris</title>
+    <link rel="stylesheet" type="text/css" href="default.css">
+  </head>
 <body>
 <table >
 <tr>
 
-	<th><table >
-	<tr><td ><h1>UP  </h1><h2 id="up"   > Up Dog     </h2> </td></tr>
-	<tr><td ><h1>NEXT</h1><h3 id="next" >Next Student</h3> </td></tr>
-	<tr><td ><h1>THEN</h1><h4 id="then1">And Then    </h4> </td></tr>
-	<tr><td ><h1>THEN</h1><h5 id="then2">And Then    </h5> </td></tr>
+	<th><table id="studentCols" >
+	<tr><td ><button onclick="nextQuestion()" >UP</button><h2 id="up"> Up Dog </h2> </td></tr>
+	<tr><td ><button onclick="cycleNext()" >NEXT</button><h3 id="next" >Next Student</h3> </td></tr>
+	<tr><td ><button onclick="cycleThen1()">THEN</button><h4 id="then1">And Then    </h4> </td></tr>
+	<tr><td ><button onclick="cycleThen2()">THEN</button><h5 id="then2">And Then    </h5> </td></tr>
 	</table></th>
 
 	<td>
+		<h1 id="question">2 + ? = 5</h1>
 		<script src="processing.js"></script>
 		<canvas width="600" height="500" data-processing-sources="draw.js"></canvas><br><br>
 		</td>
 	</td></tr>
 		
-		<tr><td><button onclick="cycleNext()">NEXT</button>
-			<!-- <p id="q">q</p></td> -->
-<!--
-		<td><form>
-		<input type="file" id="classList" colspan=2 required>
-		<button onclick="loadFileAsText()">load class list</button></form></td> -->
-	</td></tr></table>
 
 
-<script>
-	// initialize.
-	var currentClass = ["Joe Bob", "Sarah", "Mike", "Ralph", "Donnie", "Leo", "Fred", "Jane"];
-	var dynamicClass = currentClass;
-	var up = ["Donnie", "Leo", "Fred", "Jane"];
-	var n = dynamicClass.length;
-	var q = 0;
-	/*
-	var xp = [];
-	for (var i = 0; i < currentClass.length; i++) {
-		xp.push(0);
+	<tr>
+		<td colspan = 2>Load Class List from Text File: 
+		<input type="file" id="fileToLoad">
+		<button onclick="loadClassList()">Load Class List</button></td>
+	</tr>
+
+	<tr>
+		<td colspan = 2>Load questions from Text File: 
+		<input type="file" id="questionLoad">
+		<button onclick="loadQuestions()">Load Questions</button></td>
+	</tr>
+	<tr>
+		<td>
+			<button type="button" onclick="document.getElementById('inputTextToSave').style.display='none'">Hide</button>
+			<button type="button" onclick="document.getElementById('inputTextToSave').style.display='block'">Show</button>
+		</td>
+		<td>
+			<textarea id="inputTextToSave" style="width:666px;height:100px"></textarea>
+		</td></tr>
+</table>
+
+<script type='text/javascript'>
+
+function saveTextAsFile()
+{
+	var textToWrite = document.getElementById("inputTextToSave").value;
+	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs;
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null)
+	{
+		// Chrome allows the link to be clicked
+		// without actually adding it to the DOM.
+		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
 	}
+	else
+	{
+		// Firefox requires the link to be added to the DOM
+		// before it can be clicked.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+	}
+
+	downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+	document.body.removeChild(event.target);
+}
+
+/*
+function checkUndefined(thingie) {
+	if (thingie != undefined) {
+		if thingie != "") {
+			return thingie;
+		}
+	}
+}
 */
+
+function loadClassList()
+{
+	var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+	var fileReader = new FileReader();
+	fileReader.onload = function(fileLoadedEvent) 
+	{
+		var textFromFileLoaded = fileLoadedEvent.target.result;
+		currentClass = textFromFileLoaded .split("\n");
+
+		/*
+		currentClass = checkClass.filter(checkUndefined);
+		*/
+
+
+		document.getElementById("inputTextToSave").value = textFromFileLoaded;
 		dynamicClass = currentClass;
 		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-
-
-		for (var i = 0; i < 4; i++) {
-			up[i] = dynamicClass[q];
-			q++
+		document.getElementById("inputTextToSave").value = dynamicClass;
+		up = [];
+		for (i = 0; i < 4; i++) {
+			up[i] = dynamicClass[i];
 		}
-
+		q = 0;
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
 		document.getElementById('then2').innerHTML = up[3];
 
+		
+		if (up[1] === undefined) {
+			cycleNext();
+		}
+		
+		
+	}
+	fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+
+function loadQuestions()
+{
+	var fileToLoad = document.getElementById("questionLoad").files[0];
+
+	var fileReader = new FileReader();
+	fileReader.onload = function(fileLoadedEvent) 
+	{
+		var textFromFileLoaded = fileLoadedEvent.target.result;
+		currentQuest = textFromFileLoaded .split("\n");
+
+		/*
+		currentClass = checkClass.filter(checkUndefined);
+		*/
+
+
+		document.getElementById("inputTextToSave").value = textFromFileLoaded;
+		dynamicQuest = currentQuest;
+		dynamicQuest.sort(function(a, b){return 0.5 - Math.random()});
+		document.getElementById("inputTextToSave").value = dynamicQuest;
+		question = dynamicQuest[0];
+		qs = 0;
+		document.getElementById('question').innerHTML = question;	
+	}
+	fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+function nextQuestion() {
+		qs += 1;
+		
+		n = dynamicQuest.length;
+		if (qs >= n-2) {
+			dynamicQuest.sort(function(a, b){return 0.5 - Math.random()});
+			qs = 0;
+		}
+	
+		question = dynamicQuest[qs];
+		document.getElementById('question').innerHTML = question;	
+	}
 
 	function cycleNext() {
+		nextQuestion();
 		/*
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
@@ -108,46 +180,85 @@ button {
 		*/
 		q++
 		up.shift();
+
 		up[3] = dynamicClass[q];
+		
+
 		n = dynamicClass.length;
-		if (q >= n-1) {
+		if (q >= n-2) {
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 			q = 0;
 		}
-
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
 		document.getElementById('then2').innerHTML = up[3];
 		//document.getElementById('q').innerHTML = q;
+		
 	}
-/*
-// https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
-function loadFileAsText()
-{
-    var fileToLoad = document.getElementById("classList").files[0];
-	
-    var fileReader = new FileReader();
-    fileReader.onload = function(fileLoadedEvent) 
-    {
-        textFromFileLoaded = fileLoadedEvent.target.result;
-		currentClass = textFromFileLoaded .split("\n");
-		loadUp();
-			
-    };
-    fileReader.readAsText(fileToLoad, "UTF-8");
 
-}
-*/
+	function cycleThen1() {
+		nextQuestion();
+		/*
+		var i = currentClass.indexOf(up[0])
+		xp[i] += Number(xpee);
+		dynamicClass.push(up[0] + xp[i]);
+		*/
+		q++
+		up[0] = up[2];
+		up[2] = up[3];
+		up[3] = dynamicClass[q];
+		
 
+		n = dynamicClass.length;
+		if (q >= n-2) {
+			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+			q = 0;
+		}
+		document.getElementById('up').innerHTML = up[0];
+		document.getElementById('next').innerHTML = up[1];
+		document.getElementById('then1').innerHTML = up[2];
+		document.getElementById('then2').innerHTML = up[3];
+		//document.getElementById('q').innerHTML = q;
+		/*
+		if (up[1] === undefined) {
+			cycleNext();
+		}
+		*/	
+	}
+
+	function cycleThen2() {
+		nextQuestion();
+		/*
+		var i = currentClass.indexOf(up[0])
+		xp[i] += Number(xpee);
+		dynamicClass.push(up[0] + xp[i]);
+		*/
+		q++
+		up[0] = up[3];
+		up[3] = dynamicClass[q];
+		
+
+		n = dynamicClass.length;
+		if (q >= n-2) {
+			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+			q = 0;
+		}
+		document.getElementById('up').innerHTML = up[0];
+		document.getElementById('next').innerHTML = up[1];
+		document.getElementById('then1').innerHTML = up[2];
+		document.getElementById('then2').innerHTML = up[3];
+		//document.getElementById('q').innerHTML = q;
+		/*
+		if (up[1] === undefined) {
+			cycleNext();
+		}
+		*/	
+	}
 
 </script>
 
+<script type="text/javascript" src="footer.html"></script>
 
-</script>
-</body>
-
-
-
-
+  </body>
 </html>
