@@ -12,6 +12,9 @@ To add questions, do the same on the next line down.
 
 For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
 
+Example student list: https://github.com/punkbass/classtris/blob/master/students.txt
+Example question list: https://github.com/punkbass/classtris/blob/master/questions.txt
+
 ## Que buttons
 
 To load the next student, press next above the student's name
