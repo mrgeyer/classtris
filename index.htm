@@ -10,37 +10,36 @@
 <table >
 <tr>
 
-	<th><table id="studentCols" >
-	<tr><td ><button onclick="nextQuestion()" >UP</button><h2 id="up"> Up Dog </h2> </td></tr>
-	<tr><td ><button onclick="cycleNext()" >NEXT</button><h3 id="next" >Next Student</h3> </td></tr>
-	<tr><td ><button onclick="cycleThen1()">THEN</button><h4 id="then1">And Then    </h4> </td></tr>
-	<tr><td ><button onclick="cycleThen2()">THEN</button><h5 id="then2">And Then    </h5> </td></tr>
-	</table></th>
-
-	<td>
-		<h1 id="question"></h1>
+<th><table id="studentCols" >
+<tr><td ><button style="CTbutton" onclick="nextQuestion()">UP  </button><h2 id="up"   > Up Dog     </h2> </td></tr>
+<tr><td ><button style="CTbutton" onclick="cycleNext()"   >NEXT</button><h3 id="next" >Next Student</h3> </td></tr>
+<tr><td ><button style="CTbutton" onclick="cycleThen1()"  >THEN</button><h4 id="then1">And Then    </h4> </td></tr>
+<tr><td ><button style="CTbutton" onclick="cycleThen2()"  >THEN</button><h5 id="then2">And Then    </h5> </td></tr>
+</table></th>
+	
+	<td>	<h1 id="question"></h1>
 		<script src="processing.js"></script>
 		<canvas width="600" height="500" data-processing-sources="draw.js"></canvas><br><br>
-		</td>
-	</td></tr>
+	</td>
+	</tr>
 		
 
 
 	<tr>
 		<td colspan = 2>Load Class List from Text File: 
-		<input style="button" type="file" id="fileToLoad">
+		<input type="file" id="fileToLoad">
 		<button onclick="loadClassList()">Load Class List</button></td>
 	</tr>
 
 	<tr>
 		<td colspan = 2>Load questions from Text File: 
-		<input style="button" type="file" id="questionLoad">
+		<input type="file" id="questionLoad">
 		<button onclick="loadQuestions()">Load Questions</button></td>
 	</tr>
 	<tr>
 		<td>
-			<button type="button" onclick="document.getElementById('inputTextToSave').style.display='none'">Hide</button>
-			<button type="button" onclick="document.getElementById('inputTextToSave').style.display='block'">Show</button>
+			<button style="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='none'">Hide</button>
+			<button style="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='block'">Show</button>
 		</td>
 		<td>
 			<textarea id="inputTextToSave" style="width:700px;height:100px"></textarea>
