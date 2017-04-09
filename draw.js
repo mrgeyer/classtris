@@ -1,5 +1,5 @@
-var h = 500;
-var w = 800
+var h = 450;
+var w = 700
 var paintColor = color(17, 0, 255);
 var brushSize = 8;
 var isDraw = 0;
