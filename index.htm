@@ -69,22 +69,18 @@ button {
 
 <script>
 		// initialize.
-
+	/*
 	var currentClass = [];
 	var dynamicClass = [];
 	var up = [];
 	var xp = [];
 	var n = dynamicClass.length;
-		/*
+	*/	/*
 	
 	for (var i = 0; i < currentClass.length; i++) {
 		xp.push(0);
 	}
 	*/
-
-	function loadUp() {
-
-	}
 
 function destroyClickedElement(event)
 {
@@ -93,11 +89,8 @@ function destroyClickedElement(event)
 
 function loadFileAsText()
 {
-	var student = "student";
-	var pos = 0;
     var fileToLoad = document.getElementById("classList").files[0];
-	
- 
+
     var fileReader = new FileReader();
     fileReader.onload = function(fileLoadedEvent) 
     {
