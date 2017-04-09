@@ -59,7 +59,7 @@ button {
 		</td>
 	</td></tr>
 		
-		<tr><td><button onclick="cycleNext()">NEXT</button></td>
+		<tr><td><button onclick="cycleNext()">NEXT</button><p id="q">q</p></td>
 <!--
 		<td><form>
 		<input type="file" id="classList" colspan=2 required>
@@ -73,24 +73,20 @@ button {
 	var dynamicClass = currentClass;
 	var up = ["Donnie", "Leo", "Fred", "Jane"];
 	var n = dynamicClass.length;
+	var q = 0;
 	/*
 	var xp = [];
 	for (var i = 0; i < currentClass.length; i++) {
 		xp.push(0);
 	}
-	*/
-
-		xp = [];
-		for (var i = 0; i < currentClass.length; i++) {
-			xp.push(0);
-		}
+*/
 		dynamicClass = currentClass;
 		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 
 
 		for (var i = 0; i < 4; i++) {
-			up[i] = dynamicClass[0];
-			dynamicClass.shift();
+			up[i] = dynamicClass[q];
+			q++
 		}
 
 		document.getElementById('up').innerHTML = up[0];
@@ -105,22 +101,23 @@ button {
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
-
+		q++
 		up.shift();
-		up[3] = dynamicClass[0];
-		dynamicClass.shift();
+		up[3] = dynamicClass[q];
 		n = dynamicClass.length;
-		if (n === 0) {
-			dynamicClass = currentClass;
+		if (q >= n-1) {
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+			q = 0;
 		}
 
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
 		document.getElementById('then2').innerHTML = up[3];
+		document.getElementById('q').innerHTML = q;
 	}
 /*
+// https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
 function loadFileAsText()
 {
     var fileToLoad = document.getElementById("classList").files[0];
