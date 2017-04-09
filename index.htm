@@ -97,32 +97,33 @@ function loadFileAsText()
     var fileReader = new FileReader();
     fileReader.onload = function(fileLoadedEvent) 
     {
-        var textFromFileLoaded = fileLoadedEvent.target.result;
-		currentClass = textFromFileLoaded .split("\n")
-	    
-		document.getElementById('myArray').innerHTML = currentClass;
-		document.getElementById('loadText').innerHTML = textFromFileLoaded;
-	    	document.getElementById('up').innerHTML = currentClass[0];
-		document.getElementById('next').innerHTML = currentClass[1];
-		document.getElementById('then1').innerHTML = currentClass[2];
-		document.getElementById('then2').innerHTML = currentClass[3];
-		/*
-	    	dynamicClass = currentClass;
-		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+        textFromFileLoaded = fileLoadedEvent.target.result;
 		
-		n = dynamicClass.length;
-
-		for (var i = 0; i < 4; i++) {
-			up[i] = dynamicClass[0];
-			dynamicClass.shift();
-		}
-		document.getElementById('up').innerHTML = up[0];
-		document.getElementById('next').innerHTML = up[1];
-		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').innerHTML = up[3];
-		*/	
     };
-    fileReader.readAsText(fileToLoad, "UTF-8");
+	fileReader.readAsText(fileToLoad, "UTF-8");
+	currentClass = textFromFileLoaded .split("\n")
+
+	document.getElementById('myArray').innerHTML = currentClass;
+	document.getElementById('loadText').innerHTML = textFromFileLoaded;
+	document.getElementById('up').innerHTML = currentClass[0];
+	document.getElementById('next').innerHTML = currentClass[1];
+	document.getElementById('then1').innerHTML = currentClass[2];
+	document.getElementById('then2').innerHTML = currentClass[3];
+	/*
+	dynamicClass = currentClass;
+	dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+
+	n = dynamicClass.length;
+
+	for (var i = 0; i < 4; i++) {
+		up[i] = dynamicClass[0];
+		dynamicClass.shift();
+	}
+	document.getElementById('up').innerHTML = up[0];
+	document.getElementById('next').innerHTML = up[1];
+	document.getElementById('then1').innerHTML = up[2];
+	document.getElementById('then2').innerHTML = up[3];
+	*/	
 }
 
 	function cycleNext(xpee) {
