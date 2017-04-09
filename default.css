@@ -44,7 +44,17 @@ table {
     border-spacing: 5px;
 	background-color: #333333;
 }
-button {
+.button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 </style>
 </html>
