@@ -25,7 +25,8 @@ To load a new question, click the Up button.
  
  Click next to move the next student to the up position.
  
-### Known issues: Blank questions and student names. I recommend using blank names and questions as a wildcard until it gets fixed. 
+### Known issues
+Blank questions and student names. I recommend using blank names and questions as a wildcard until it gets fixed. 
 
 ### Credits
  
