@@ -5,10 +5,8 @@ To try out the demo visit: https://punkbass.github.io/classtris/
 
 ## Load Students and Questions
 
-To use it, you need to load a class list from a text file at the bottom of the page. Seperate names with a new line. 
-Click choose file, then pick your file. Then click load class.
-
-To add questions, do the same on the next line down.
+To use it, you need to load a class list and a question list from text files at the bottom of the page. On the lists, seperate names and questions with a new line. 
+Click choose file, then pick your file. Then click load class or load question.
 
 For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
 
