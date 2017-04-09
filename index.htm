@@ -56,7 +56,7 @@
 </table>
 
 <script type='text/javascript'>
-
+var QuestionsLoaded = false;
 function saveTextAsFile()
 {
 	var textToWrite = document.getElementById("inputTextToSave").value;
@@ -164,6 +164,7 @@ function loadQuestions()
 		document.getElementById('question').innerHTML = question;	
 	}
 	fileReader.readAsText(fileToLoad, "UTF-8");
+	questionsLoaded = true;
 }
 
 function nextQuestion() {
@@ -180,7 +181,9 @@ function nextQuestion() {
 	}
 
 	function cycleNext() {
-		nextQuestion();
+		if (questionsLoaded) {
+			nextQuestion();
+		}
 		/*
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
@@ -206,7 +209,9 @@ function nextQuestion() {
 	}
 
 	function cycleThen1() {
-		nextQuestion();
+		if (questionsLoaded) {
+			nextQuestion();
+		}
 		/*
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
@@ -236,7 +241,9 @@ function nextQuestion() {
 	}
 
 	function cycleThen2() {
-		nextQuestion();
+		if (questionsLoaded) {
+			nextQuestion();
+		}
 		/*
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
