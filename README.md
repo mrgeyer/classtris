@@ -29,6 +29,6 @@ To load a new question, click the Up button.
 
 ### Credits
  
-Uses processing.js for the blackboard.
+Uses processing.js for the blackboard. http://processingjs.org/
 
 Uses the method shared by This Could Be Better for the file loading: https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
