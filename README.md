@@ -3,9 +3,32 @@ A Classroom management tool based on Tetris that features a student que.
 
 To try out the demo visit: https://punkbass.github.io/classtris/
 
-Uses processing.js for the blackboard. Hold down mouse to draw. Type letters to write where the mouse is pointing. Click the screen to change the text location.
+## Load Students and Questions
+
+To use it, you need to load a class list from a text file at the bottom of the page. Seperate names with a new line. 
+Click choose file, then pick your file. Then click load class.
+
+To add questions, do the same on the next line down.
+
+For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
+
+## Que buttons
+
+To load the next student, press next above the student's name
+To load other students in the que, press then above those student's names
+To load a new question, click the Up button.
+
+## Blakboard
+
+ Hold down mouse to draw. Type letters to write where the mouse is pointing. Click the screen to change the text location.
  Click E to erase the blackboard. Click colors to switch colors. Click the plus and minus to change the size of the pen.
  
- Click next to cycle through the student names.
+ Click next to move the next student to the up position.
  
- I've been working on adding a way to upload text documents. JavaScript has been taunting me by briefly showing the imported text and reloading the page and reseting it. So I commited the code out. I was using the method proposed by This Could Be Better https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+### Known issues: Blank questions and student names. I recommend using blank names and questions as a wildcard until it gets fixed. 
+
+### Credits
+ 
+Uses processing.js for the blackboard.
+
+Uses the method shared by This Could Be Better for the file loading: https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
