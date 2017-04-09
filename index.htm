@@ -1,0 +1,160 @@
+<html>
+<style>
+body {
+	background-color: #333333;
+	}
+
+h1 { text-family: Arial, sans-serif;
+
+	}
+
+h2 { text-family: Arial, sans-serif;
+	 color: red;
+	}
+
+h3 { text-family: Arial, sans-serif;
+	 color: orange;
+	}
+
+h4 { text-family: Arial, sans-serif;
+	 color: yellow;
+	}
+
+h5 { text-family: Arial, sans-serif;
+	 color: magenta;
+	}
+
+td {
+	text-align: center;
+    border: 10px solid gray;
+	border-style: double;
+    padding: 5px;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+table {
+    border-spacing: 5px;
+	background-color: #333333;
+}
+button {
+
+}
+
+</style>
+
+<body>
+<table >
+<tr>
+
+	<th><table >
+	<tr><td ><h1>UP  </h1><h2 id="up"   > Up Dog     </h2> </td></tr>");
+	<tr><td ><h1>NEXT</h1><h3 id="next" >Next Student</h3> </td></tr>");
+	<tr><td ><h1>THEN</h1><h4 id="then1">And Then    </h4> </td></tr>");
+	<tr><td ><h1>THEN</h1><h5 id="then2">And Then    </h5> </td></tr>");
+	</table></th>
+
+	<td>
+		<script src="processing.js"></script>
+		<canvas width="600" height="500" data-processing-sources="draw.js"></canvas><br><br>
+		</td>
+	</td></tr>
+		
+		<tr><td><button onclick="cycleNext(Number(0))">NEXT</button></td>
+
+		<td><form>
+		<input type="file" id="classList" colspan=2 required>
+		<button onclick="loadFileAsText()">load class list</button></form></td>
+	</td></tr></table>
+
+
+<script>
+		// initialize.
+
+	var currentClass = [];
+	var dynamicClass = [];
+	var up = [];
+	var xp = [];
+	var n = dynamicClass.length;
+		/*
+	
+	for (var i = 0; i < currentClass.length; i++) {
+		xp.push(0);
+	}
+	*/
+
+	function loadUp() {
+		dynamicClass = currentClass;
+		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+		
+		n = dynamicClass.length;
+
+		for (var i = 0; i < 4; i++) {
+			up[i] = dynamicClass[0];
+			dynamicClass.shift();
+		}
+
+		document.getElementById('up').innerHTML = up[0];
+		document.getElementById('next').innerHTML = up[1];
+		document.getElementById('then1').innerHTML = up[2];
+		document.getElementById('then2').innerHTML = up[3];
+	}
+
+function destroyClickedElement(event)
+{
+	document.body.removeChild(event.target);
+}
+
+function loadFileAsText()
+{
+	var student = "student";
+	var pos = 0;
+    var fileToLoad = document.getElementById("classList").files[0];
+	
+ 
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent) 
+    {
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+		currentClass = textFromFileLoaded .split("\n");
+		document.getElementById('up').innerHTML = currentClass;
+		document.getElementById('next').innerHTML = textFromFileLoaded;
+		document.getElementById('then1').innerHTML = currentClass[2];
+		document.getElementById('then2').innerHTML = currentClass[3];
+		//loadUp();
+			
+    };
+    fileReader.readAsText(fileToLoad, "UTF-8");
+}
+
+	function cycleNext(xpee) {
+		/*		
+		var i = currentClass.indexOf(up[0])
+		xp[i] += Number(xpee);
+		dynamicClass.push(up[0] + xp[i]);
+		*/
+		up.shift();
+		up[3] = dynamicClass[0];
+		dynamicClass.shift();
+		n = dynamicClass.length;
+		if (n === 0) {
+			dynamicClass = currentClass;
+			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+		}
+
+		document.getElementById('up').innerHTML = up[0];
+		document.getElementById('next').innerHTML = up[1];
+		document.getElementById('then1').innerHTML = up[2];
+		document.getElementById('then2').innerHTML = up[3];
+	}
+
+
+
+
+</script>
+
+</body>
+
+
+
+
+</html>
