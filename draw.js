@@ -8,8 +8,8 @@ var type = false;
 var typeCursorX = -1;
 var typeCursorY = -1;
 var letter = 'A';
-var ts = 40;
-var bs = 10;
+var ts = 40;	// text size
+var bs = 20; 	// brush size
 
 
 
