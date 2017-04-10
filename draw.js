@@ -9,7 +9,7 @@ var typeCursorX = -1;
 var typeCursorY = -1;
 var letter = 'A';
 var ts = 40;	// text size
-var bs = 25; 	// brush size
+var bs = 30; 	// brush size
 
 
 
