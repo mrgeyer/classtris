@@ -37,8 +37,8 @@ void draw() {
     rect(bs,h-bs,bs,bs);
     
 
-    // orange
-    fill(255, 125, 0);
+    // yellow
+    fill(255, 255, 0);
     rect(2*bs,h-bs,bs,bs);
     
 
@@ -148,7 +148,7 @@ void mousePressed() {
 
 		// yellow
 		if (mouseX > 2*bs && mouseX < 3*bs) {
-		    paintColor = color(255, 125, 0);
+		    paintColor = color(255, 255, 0);
 		}
 
 		// green
