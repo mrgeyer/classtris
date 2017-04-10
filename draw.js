@@ -131,7 +131,7 @@ void mousePressed() {
 			brushSize = brushSize-4;
 			ts = brushsize*10;
 		}
-		if (mouseX < 8*bs && mouseX > 7*bs  && brushSize < 81) {
+		if (mouseX < 8*bs && mouseX > 7*bs  && brushSize < 96) {
 			brushSize = brushSize+4;
 			ts = brushsize*10;
 		}
