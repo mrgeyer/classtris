@@ -9,7 +9,7 @@ var typeCursorX = -1;
 var typeCursorY = -1;
 var letter = 'A';
 var ts = 40;
-var bs = 25;
+var bs = 10;
 
 
 
@@ -114,7 +114,7 @@ void mouseReleased() {
 }
 
 void mousePressed() {
- 	if(mouseY < h-50) {
+ 	if(mouseY < h-bs) {
 		typeCursorX = mouseX;
 		typeCursorY = mouseY;
     	isDraw = 1;
