@@ -1,7 +1,7 @@
 var h = 450;
 var w = 700
 var paintColor = color(17, 0, 255);
-var brushSize = 8;
+var brushSize = 4;
 var isDraw = 0;
 var clear = true;
 var type = false;
