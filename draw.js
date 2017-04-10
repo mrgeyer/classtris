@@ -9,6 +9,7 @@ var typeCursorX = -1;
 var typeCursorY = -1;
 var letter = 'A';
 var ts = 40;
+var bs = 25;
 
 
 
@@ -28,48 +29,48 @@ void draw() {
 
     // red
     fill(250, 0, 0);
-    rect(0,h-50,50,50);
+    rect(0,h-bs,bs,bs);
     
 
     // blue
     fill(51, 0, 255);
-    rect(50,h-50,50,50);
+    rect(bs,h-bs,bs,bs);
     
 
     // orange
     fill(255, 125, 0);
-    rect(100,h-50,50,50);
+    rect(2*bs,h-bs,bs,bs);
     
 
     // green
     fill(0, 255, 38);
-    rect(150,h-50,50,50);
+    rect(3*bs,h-bs,bs,bs);
     
 
     // purple
     fill(213, 0, 255);
-    rect(200,h-50,50,50);
+    rect(4*bs,h-bs,bs,bs);
     
 	// brushSize
 	noStroke();
     fill(0,0,0);
-    rect(250,h-50,50,50);
-    rect(300,h-50,50,50);
-    rect(350,h-50,50,50);
+    rect(5*bs,h-bs,bs,bs);
+    rect(6*bs,h-bs,bs,bs);
+    rect(7*bs,h-bs,bs,bs);
     fill(255,255,255);
-    rect(260,h-30,30,10);
-    rect(360,h-30,30,10);
-    rect(370,h-40,10,30);
-    textSize(40);
-    text(brushSize, 305, h-10);  
+    rect(5.2*bs,h-.6*bs,.6*bs,.2*bs);
+    rect(7.2*bs,h-.6*bs,.6*bs,.2*bs);
+    rect(7.4*bs,h-.8*bs,.2*bs,.6*bs);
+    textSize(.8*bs);
+    text(brushSize, 6.1*bs, h-.2*bs);  
 
 	//eraser
 	stroke(0,0,0);
 	fill(0,0,0);
-	rect(w-50,h-50,50,50);
+	rect(w-bs,h-bs,bs,bs);
 	fill(255,0,0);
-    textSize(40);
-    text("E", w-45, h-10);  
+    textSize(.8*bs);
+    text("E", w-.9*bs, h-.2*bs);  
 
 	if (isDraw === 1) {
 		noStroke();
@@ -126,42 +127,42 @@ void mousePressed() {
 
  void mouseClicked() {
 	if (mouseY > h-50) {
-		if (mouseX > 250 && mouseX < 300 && brushSize > 1) {
+		if (mouseX > 5*bs && mouseX < 6*bs && brushSize > 1) {
 			brushSize = brushSize/2;
 			ts = brushsize*10;
 		}
-		if (mouseX < 400 && mouseX > 350  && brushSize < 63) {
+		if (mouseX < 8*bs && mouseX > 7*bs  && brushSize < 63) {
 			brushSize = brushSize*2;
 			ts = brushsize*10;
 		}
 
 		// red
-		if (mouseX < 50) {
+		if (mouseX < bs) {
 		    paintColor = color(255, 0, 0);
 		}
 
 		// blue
-		if (mouseX > 50 && mouseX < 100) {
+		if (mouseX > bs && mouseX < 2*bs) {
 		    paintColor = color(51, 0, 255);
 		}
 
 		// yellow
-		if (mouseX > 100 && mouseX < 150) {
+		if (mouseX > 2*bs && mouseX < 3*bs) {
 		    paintColor = color(255, 125, 0);
 		}
 
 		// green
-		if (mouseX > 150 && mouseX < 200) {
+		if (mouseX > 3*bs && mouseX < 4*bs) {
 		    paintColor = color(0, 255, 38);
 		}
 
 		// purple
-		if (mouseX > 200 && mouseX < 250) {
+		if (mouseX > 4*bs && mouseX < 5*bs) {
 		    paintColor = color(213, 0, 255);
 		}
 		
 		// eraser
-		if (mouseX > 550) {
+		if (mouseX > w-bs) {
 		    clear = true;
 		}
 	}
