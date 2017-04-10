@@ -75,7 +75,7 @@ void draw() {
 	if (isDraw === 1) {
 		noStroke();
 		fill(paintColor);
-		ellipse(mouseX, mouseY, brushSize, brushSize);
+		rect(mouseX, mouseY, brushSize, brushSize);
 	}
 
 
@@ -128,11 +128,11 @@ void mousePressed() {
  void mouseClicked() {
 	if (mouseY > h-50) {
 		if (mouseX > 5*bs && mouseX < 6*bs && brushSize > 1) {
-			brushSize = brushSize/2;
+			brushSize = brushSize/4;
 			ts = brushsize*10;
 		}
 		if (mouseX < 8*bs && mouseX > 7*bs  && brushSize < 63) {
-			brushSize = brushSize*2;
+			brushSize = brushSize*4;
 			ts = brushsize*10;
 		}
 
