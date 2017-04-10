@@ -77,7 +77,7 @@ function loadClassList()
 				case 2:
 					team2.push(dynamicClass[i]);
 					break;
-				case 1:
+				case 3:
 					team3.push(dynamicClass[i]);
 					break;
 				case 0:
