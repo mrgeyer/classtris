@@ -69,10 +69,8 @@ function loadClassList()
 		team3 = [];
 		team4 = [];
 		
-		t1p = 0;
-		t2p = 0;
-		t3p = 0;
-		t4p = 0;
+		tp = [];
+
 		var teamN = 0;
 		for (i = 0; i < dynamicClass.length; i++) {
 			teamN = i%4;
@@ -91,10 +89,12 @@ function loadClassList()
 					break;
 			}
 		}
+		/*
 		document.getElementById('team1').innerHTML = team1;
 		document.getElementById('team2').innerHTML = team2;
 		document.getElementById('team3').innerHTML = team3;
 		document.getElementById('team4').innerHTML = team4;
+		*/
 
 
 		for (i = 0; i < 4; i++) {
@@ -256,16 +256,38 @@ function nextQuestion() {
 
 	function score(pt) {
 		if (team1.some(checkUp)) {
-			t1p += pt;
+			tp[1] += pt;
 		} else if (team2.some(checkUp)) {
-			t2p += pt;
+			tp[2] += pt;
 		} else if (team3.some(checkUp)) {
-			t3p += pt;	
+			tp[3] += pt;	
 		} else if (team4.some(checkUp)) {
-			t4p += pt;	
+			tp[0] += pt;	
 		}
-		document.getElementById('t1p').innerHTML = t1p;
-		document.getElementById('t2p').innerHTML = t2p;
-		document.getElementById('t3p').innerHTML = t3p;
-		document.getElementById('t4p').innerHTML = t4p;
+		<!--
+		document.getElementById('t1p').innerHTML = tp[1];
+		document.getElementById('t2p').innerHTML = tp[2];
+		document.getElementById('t3p').innerHTML = tp[3];
+		document.getElementById('t4p').innerHTML = tp[0];
+		-->
+	}
+	
+	function gameOver() {
+		highScore = Math.max(tp[0],tp[1],tp[2],tp[3]);
+   		teamN = tp.indexOf(highScore);
+		switch(teamN) {
+			case 1:
+				winners = team1;
+				break;
+			case 2:
+				winners = team2;
+				break;
+			case 3:
+				winners = team3;
+				break;
+			case 0:
+				winners = team0;
+				break;
+		congrats = "Congratulations " + winners.toString() + "!";
+		document.getElementById('question').innerHTML = congrats;
 	}
