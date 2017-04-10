@@ -264,4 +264,8 @@ function nextQuestion() {
 		} else if (team4.some(checkUp)) {
 			t4p += pt;	
 		}
+		document.getElementById('t1p').innerHTML = t1p;
+		document.getElementById('t2p').innerHTML = t2p;
+		document.getElementById('t3p').innerHTML = t3p;
+		document.getElementById('t4p').innerHTML = t4p;
 	}
