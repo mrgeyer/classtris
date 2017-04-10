@@ -62,11 +62,17 @@ function loadClassList()
 		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 		document.getElementById("inputTextToSave").value = dynamicClass;
 		up = [];
-		//
+		
+		// teams
 		team1 = [];
 		team2 = [];
 		team3 = [];
 		team4 = [];
+		
+		t1p = 0;
+		t2p = 0;
+		t3p = 0;
+		t4p = 0;
 		var teamN = 0;
 		for (i = 0; i < dynamicClass.length; i++) {
 			teamN = i%4;
@@ -242,4 +248,20 @@ function nextQuestion() {
 			cycleNext();
 		}
 		*/	
+	}
+
+	function checkUp(player) {
+		return player == up[0];
+	}
+
+	function score(pt) {
+		if (team1.some(checkUp)) {
+			t1p += pt;
+		} else if (team2.some(checkUp)) {
+			t2p += pt;
+		} else if (team3.some(checkUp)) {
+			t3p += pt;	
+		} else if (team4.some(checkUp)) {
+			t4p += pt;	
+		}
 	}
