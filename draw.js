@@ -13,6 +13,7 @@ var bs = 30; 	// brush size
 
 
 
+
 void setup() { 
   size(w, h);
 }
@@ -83,6 +84,7 @@ void draw() {
 		fill(paintColor);
 		textSize(ts);
 		text(letter, typeCursorX, typeCursorY);
+		textFont("Courier New");
 		type = false;
 		}
 
