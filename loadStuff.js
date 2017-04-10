@@ -69,7 +69,8 @@ function loadClassList()
 		team3 = [];
 		team4 = [];
 		
-		tp = [];
+		// team points
+		tp = [0,0,0,0];
 
 		var teamN = 0;
 		for (i = 0; i < dynamicClass.length; i++) {
