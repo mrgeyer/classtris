@@ -290,6 +290,6 @@ function nextQuestion() {
 				winners = team4;
 				break;
 		}
-		congrats = "Congratulations " + winners.toString() + "!";
+		congrats = "Congratulations " + winners.join(", ") + "!";
 		document.getElementById('question').innerHTML = congrats;
 	}
