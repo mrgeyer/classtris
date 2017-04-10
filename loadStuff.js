@@ -288,6 +288,7 @@ function nextQuestion() {
 			case 0:
 				winners = team4;
 				break;
+		}
 		congrats = "Congratulations " + winners.toString() + "!";
 		document.getElementById('question').innerHTML = congrats;
 	}
