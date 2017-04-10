@@ -264,12 +264,12 @@ function nextQuestion() {
 		} else if (team4.some(checkUp)) {
 			tp[0] += pt;	
 		}
-		<!--
+		
 		document.getElementById('t1p').innerHTML = tp[1];
 		document.getElementById('t2p').innerHTML = tp[2];
 		document.getElementById('t3p').innerHTML = tp[3];
 		document.getElementById('t4p').innerHTML = tp[0];
-		-->
+		
 	}
 	
 	function gameOver() {
@@ -286,7 +286,7 @@ function nextQuestion() {
 				winners = team3;
 				break;
 			case 0:
-				winners = team0;
+				winners = team4;
 				break;
 		congrats = "Congratulations " + winners.toString() + "!";
 		document.getElementById('question').innerHTML = congrats;
