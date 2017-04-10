@@ -1,7 +1,7 @@
 var h = 450;
 var w = 700
 var paintColor = color(17, 0, 255);
-var brushSize = 9;
+var brushSize = 8;
 var isDraw = 0;
 var clear = true;
 var type = false;
@@ -128,11 +128,11 @@ void mousePressed() {
  void mouseClicked() {
 	if (mouseY > h-50) {
 		if (mouseX > 5*bs && mouseX < 6*bs && brushSize > 1) {
-			brushSize = brushSize/3;
+			brushSize = brushSize+4;
 			ts = brushsize*10;
 		}
 		if (mouseX < 8*bs && mouseX > 7*bs  && brushSize < 81) {
-			brushSize = brushSize*3;
+			brushSize = brushSize-4;
 			ts = brushsize*10;
 		}
 
