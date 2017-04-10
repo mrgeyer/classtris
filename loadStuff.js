@@ -62,6 +62,35 @@ function loadClassList()
 		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 		document.getElementById("inputTextToSave").value = dynamicClass;
 		up = [];
+		//
+		team1 = [];
+		team2 = [];
+		team3 = [];
+		team4 = [];
+		var teamN = 0;
+		for (i = 0; i < dynamicClass.length; i++) {
+			teamN = i%4;
+			switch(i%4) {
+				case 1:
+					team1.push(dynamicClass[i]);
+					break;
+				case 2:
+					team2.push(dynamicClass[i]);
+					break;
+				case 1:
+					team3.push(dynamicClass[i]);
+					break;
+				case 0:
+					team4.push(dynamicClass[i]);
+					break;
+			}
+		}
+		document.getElementById('team1').innerHTML = team1;
+		document.getElementById('team2').innerHTML = team2;
+		document.getElementById('team3').innerHTML = team3;
+		document.getElementById('team4').innerHTML = team4;
+
+
 		for (i = 0; i < 4; i++) {
 			up[i] = dynamicClass[i];
 		}
@@ -174,6 +203,8 @@ function nextQuestion() {
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
 		document.getElementById('then2').innerHTML = up[3];
+		
+		// debug script
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
