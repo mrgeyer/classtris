@@ -17,7 +17,7 @@ Example question list: https://github.com/punkbass/classtris/blob/master/questio
 
 To load the next student, press NEXT above the student's name
 To load other students in the que, press THEN above those student's names
-To load a new question, click UP.
+To load a new question, click UP or Q.
 
 ## Teams and Points
 
