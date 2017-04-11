@@ -15,15 +15,16 @@ Example question list: https://github.com/punkbass/classtris/blob/master/questio
 
 ## Que buttons
 
-To load the next student, press NEXT above the student's name
-To load other students in the que, press THEN above those student's names
-To load a new question, click UP or Q.
+To load the next student, press N on the top menu or NEXT above the student's name 
+To load other students in the que, press THEN above the student's names
+To load a new question, click UP above the student's name or Q in the top menu.
 
 ## Teams and Points
 
 Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Click GAME OVER to show the winning team.
 
 ## Blakboard
+To display the Blackboard, click BB in the top menu. To hide the blackboard click HIDE in the top menu.
 
  Hold down mouse to draw. Type letters to write where the mouse is pointing. Click the screen to change the text location.
  Click E to erase the blackboard. Click colors to switch colors. Click the plus and minus to change the size of the pen.
