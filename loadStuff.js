@@ -62,6 +62,42 @@ function loadClassList()
 		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 		document.getElementById("inputTextToSave").value = dynamicClass;
 		up = [];
+		
+		// teams
+		team1 = [];
+		team2 = [];
+		team3 = [];
+		team4 = [];
+		
+		// team points
+		tp = [0,0,0,0];
+
+		var teamN = 0;
+		for (i = 0; i < dynamicClass.length; i++) {
+			teamN = i%4;
+			switch(i%4) {
+				case 1:
+					team1.push(dynamicClass[i]);
+					break;
+				case 2:
+					team2.push(dynamicClass[i]);
+					break;
+				case 3:
+					team3.push(dynamicClass[i]);
+					break;
+				case 0:
+					team4.push(dynamicClass[i]);
+					break;
+			}
+		}
+		/*
+		document.getElementById('team1').innerHTML = team1;
+		document.getElementById('team2').innerHTML = team2;
+		document.getElementById('team3').innerHTML = team3;
+		document.getElementById('team4').innerHTML = team4;
+		*/
+
+
 		for (i = 0; i < 4; i++) {
 			up[i] = dynamicClass[i];
 		}
@@ -174,6 +210,8 @@ function nextQuestion() {
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
 		document.getElementById('then2').innerHTML = up[3];
+		
+		// debug script
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
@@ -211,4 +249,47 @@ function nextQuestion() {
 			cycleNext();
 		}
 		*/	
+	}
+
+	function checkUp(player) {
+		return player == up[0];
+	}
+
+	function score(pt) {
+		if (team1.some(checkUp)) {
+			tp[1] += pt;
+		} else if (team2.some(checkUp)) {
+			tp[2] += pt;
+		} else if (team3.some(checkUp)) {
+			tp[3] += pt;	
+		} else if (team4.some(checkUp)) {
+			tp[0] += pt;	
+		}
+		
+		document.getElementById('t1p').innerHTML = tp[1];
+		document.getElementById('t2p').innerHTML = tp[2];
+		document.getElementById('t3p').innerHTML = tp[3];
+		document.getElementById('t4p').innerHTML = tp[0];
+		
+	}
+	
+	function gameOver() {
+		highScore = Math.max(tp[0],tp[1],tp[2],tp[3]);
+   		teamN = tp.indexOf(highScore);
+		switch(teamN) {
+			case 1:
+				winners = team1;
+				break;
+			case 2:
+				winners = team2;
+				break;
+			case 3:
+				winners = team3;
+				break;
+			case 0:
+				winners = team4;
+				break;
+		}
+		congrats = "Congratulations " + winners.join(", ") + "!";
+		document.getElementById('question').innerHTML = congrats;
 	}

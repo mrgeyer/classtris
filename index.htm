@@ -23,22 +23,29 @@
 <tr><td width=112 height=112><button class="CTbutton" onclick="cycleThen2()"  >THEN</button><h5 id="then2">And Then    </h5> </td></tr>
 </table></th>
 	
-	<td width=600>	<h1 id="question"></h1>
+	<td width=600 colspan=3>	<h1 id="question"></h1>
 		<script src="processing.js"></script>
 		<canvas width="700" height="450" data-processing-sources="draw.js"></canvas><br><br>
+		<button class="CTbutton" onclick="score(0)"  >0</button> 
+		<button class="CTbutton" onclick="score(1)"  >1</button>
+		<button class="CTbutton" onclick="score(2)"  >2</button>
+		<button class="CTbutton" onclick="score(3)"  >3</button>
+		<button class="CTbutton" onclick="score(4)"  >4</button>
+		<button class="CTbutton" onclick="gameOver()">GAME OVER</button>
 	</td>
 	</tr>
 		
+<tr><td><p>MONO</p><p id="t1p"></p><p id="team1"></p></td><td><p>DI</p><p id="t2p"></p><p id="team2"></p></td><td><p>TRI</p><p id="t3p"></p><p id="team3"></p></td><td><p>TETRA</p><p id="t4p"></p><p id="team4"></p></td></tr>
 
 
 	<tr>
-		<td colspan = 2>Load Class List from Text File: 
+		<td colspan = 4>Load Class List from Text File: 
 		<input type="file" id="fileToLoad">
 		<button onclick="loadClassList()">Load Class List</button></td>
 	</tr>
 
 	<tr>	
-		<td colspan = 2>Load Questions from Text File: 
+		<td colspan = 4>Load Questions from Text File: 
 		<input type="file" id="questionLoad">
 		<button onclick="loadQuestions()">Load Questions</button></td>
 		
@@ -50,10 +57,12 @@
 			<button class="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='block'">Show</button>
 			<p><a href="https://github.com/punkbass/classtris/blob/master/README.md" target="_blank">directions</a></p>
 		</td>
-		<td>
+		<td colspan= 3>
 			
 			<textarea id="inputTextToSave" style="width:700px;height:100px"></textarea>
 		</td></tr>
+
+	
 </table>
 
 <script src="loadStuff.js"></script>
