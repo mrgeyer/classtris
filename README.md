@@ -13,6 +13,9 @@ For confirmation, questions and students are shown in a text box under the load 
 Example student list: https://github.com/punkbass/classtris/blob/master/students.txt
 Example question list: https://github.com/punkbass/classtris/blob/master/questions.txt
 
+You can add images to the question list by using the HTML tags. See the example question list for an example.
+To do more than one line, use the br html tag. See the example question list for an example
+
 ## Que buttons
 
 To load the next student, press N on the top menu or NEXT above the student's name 
