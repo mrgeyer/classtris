@@ -19,6 +19,10 @@ To load the next student, press NEXT above the student's name
 To load other students in the que, press THEN above those student's names
 To load a new question, click UP.
 
+## Teams and Points
+
+Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Click GAME OVER to show the winning team.
+
 ## Blakboard
 
  Hold down mouse to draw. Type letters to write where the mouse is pointing. Click the screen to change the text location.
