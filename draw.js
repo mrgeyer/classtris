@@ -59,11 +59,13 @@ void draw() {
     rect(w-bs,6*bs,bs,bs);
     rect(w-bs,7*bs,bs,bs);
     fill(255,255,255);
-    rect(w-.8*bs,5.4*bs,.6*bs,.2*bs);
+    // +
+    rect(w-.6*bs,5.4*bs,.2*bs,.6*bs);
+    rect(w-.8*bs,5.6*bs,.6*bs,.2*bs);
+    // -
     rect(w-.8*bs,7.4*bs,.6*bs,.2*bs);
-    rect(w-.8*bs,7.4*bs,.2*bs,.6*bs);
     textSize(.8*bs);
-    text(brushSize, w-.1*bs,6.2*bs);  
+    text(brushSize, w-.9*bs,7*bs);  
 
 	//eraser
 	stroke(0,0,0);
@@ -116,7 +118,7 @@ void mouseReleased() {
 }
 
 void mousePressed() {
- 	if(mouseY < h-bs) {
+ 	if(mouseX < w-bs) {
 		typeCursorX = mouseX;
 		typeCursorY = mouseY;
     	isDraw = 1;
@@ -129,12 +131,12 @@ void mousePressed() {
 
  void mouseClicked() {
 	if (mouseX > w-50) {
-		if (mouseY > 5*bs && mouseY < 6*bs && brushSize > 4) {
-			brushSize = brushSize-4;
+		if (mouseY > 5*bs && mouseY < 6.5*bs && brushSize < 96) {
+			brushSize += 4;
 			ts = brushsize*10;
 		}
-		if (mouseY < 8*bs && mouseY > 7*bs  && brushSize < 96) {
-			brushSize = brushSize+4;
+		if (mouseY < 8.5*bs && mouseY > 7*bs  && brushSize > 4) {
+			brushSize -= 4;
 			ts = brushsize*10;
 		}
 
@@ -169,5 +171,3 @@ void mousePressed() {
 		}
 	}
 }
-
-
