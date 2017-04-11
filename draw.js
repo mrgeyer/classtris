@@ -30,40 +30,40 @@ void draw() {
 
     // red
     fill(250, 0, 0);
-    rect(0,h-bs,bs,bs);
+    rect(w-bs,0,bs,bs);
     
 
     // blue
     fill(51, 0, 255);
-    rect(bs,h-bs,bs,bs);
+    rect(w-bs,bs,bs,bs);
     
 
     // yellow
     fill(255, 255, 0);
-    rect(2*bs,h-bs,bs,bs);
+    rect(w-bs,2*bs,bs,bs);
     
 
     // green
     fill(0, 255, 38);
-    rect(3*bs,h-bs,bs,bs);
+    rect(w-bs,3*bs,bs,bs);
     
 
     // purple
     fill(213, 0, 255);
-    rect(4*bs,h-bs,bs,bs);
+    rect(w-bs,4*bs,bs,bs);
     
 	// brushSize
 	noStroke();
     fill(0,0,0);
-    rect(5*bs,h-bs,bs,bs);
-    rect(6*bs,h-bs,bs,bs);
-    rect(7*bs,h-bs,bs,bs);
+    rect(w-bs,5*bs,bs,bs);
+    rect(w-bs,6*bs,bs,bs);
+    rect(w-bs,7*bs,bs,bs);
     fill(255,255,255);
-    rect(5.2*bs,h-.6*bs,.6*bs,.2*bs);
-    rect(7.2*bs,h-.6*bs,.6*bs,.2*bs);
-    rect(7.4*bs,h-.8*bs,.2*bs,.6*bs);
+    rect(w-.6*bs,5.2*bs,.6*bs,.2*bs);
+    rect(w-.6*bs,7.2*bs,.6*bs,.2*bs);
+    rect(w-.8*bs,7.4*bs,.2*bs,.6*bs);
     textSize(.8*bs);
-    text(brushSize, 6.1*bs, h-.2*bs);  
+    text(brushSize, w-.2*bs,6.1*bs);  
 
 	//eraser
 	stroke(0,0,0);
@@ -128,43 +128,43 @@ void mousePressed() {
 
 
  void mouseClicked() {
-	if (mouseY > h-50) {
-		if (mouseX > 5*bs && mouseX < 6*bs && brushSize > 4) {
+	if (mouseX > w-50) {
+		if (mouseY > 5*bs && mouseY < 6*bs && brushSize > 4) {
 			brushSize = brushSize-4;
 			ts = brushsize*10;
 		}
-		if (mouseX < 8*bs && mouseX > 7*bs  && brushSize < 96) {
+		if (mouseY < 8*bs && mouseY > 7*bs  && brushSize < 96) {
 			brushSize = brushSize+4;
 			ts = brushsize*10;
 		}
 
 		// red
-		if (mouseX < bs) {
+		if (mouseY < bs) {
 		    paintColor = color(255, 0, 0);
 		}
 
 		// blue
-		if (mouseX > bs && mouseX < 2*bs) {
+		if (mouseY > bs && mouseY < 2*bs) {
 		    paintColor = color(51, 0, 255);
 		}
 
 		// yellow
-		if (mouseX > 2*bs && mouseX < 3*bs) {
+		if (mouseY > 2*bs && mouseY < 3*bs) {
 		    paintColor = color(255, 255, 0);
 		}
 
 		// green
-		if (mouseX > 3*bs && mouseX < 4*bs) {
+		if (mouseY > 3*bs && mouseY < 4*bs) {
 		    paintColor = color(0, 255, 38);
 		}
 
 		// purple
-		if (mouseX > 4*bs && mouseX < 5*bs) {
+		if (mouseY > 4*bs && mouseY < 5*bs) {
 		    paintColor = color(213, 0, 255);
 		}
 		
 		// eraser
-		if (mouseX > w-bs) {
+		if (mouseY > h-bs) {
 		    clear = true;
 		}
 	}
