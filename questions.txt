@@ -7,3 +7,4 @@
 ?/5 = 6
 75/? = 5
 <img src="http://cdn-6.analyzemath.com/primary_math/grade_4/patterns_question_12.gif">
+<img src="http://latex.codecogs.com/png.latex?\inline&space;a^2x&plus;bx=c" title="a^2x+bx=c" />
