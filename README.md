@@ -24,7 +24,7 @@ To load a new question, click UP above the student's name or Q in the top menu.
 
 ## Teams and Points
 
-Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Click GAME OVER to show the winning team.
+Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Click GG to show the winning team.
 
 ## Blakboard
 To display the Blackboard, click BB in the top menu. To hide the blackboard click HIDE in the top menu.
