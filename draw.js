@@ -1,4 +1,4 @@
-var h = 450;
+var h = 425;
 var w = 700
 var paintColor = color(17, 0, 255);
 var brushSize = 8;
