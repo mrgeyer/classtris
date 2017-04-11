@@ -26,6 +26,7 @@
 	<td width=600 colspan=3>	<h1 id="question"></h1>
 		<script src="processing.js"></script>
 		<canvas width="700" height="450" data-processing-sources="draw.js"></canvas><br><br>
+		<button class="CTbutton" onclick="nextQuestion()">Q</button> 
 		<button class="CTbutton" onclick="score(1)"  >1</button>
 		<button class="CTbutton" onclick="score(2)"  >2</button>
 		<button class="CTbutton" onclick="score(3)"  >3</button>
@@ -51,7 +52,7 @@
 	</tr>
 	<tr>
 		<td>
-			<button class="CTbutton" onclick="nextQuestion()">Q</button> 
+			
 			<button class="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='none'">Hide</button>
 			<button class="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='block'">Show</button>
 			<p><a href="https://github.com/punkbass/classtris/blob/master/README.md" target="_blank">directions</a></p>
