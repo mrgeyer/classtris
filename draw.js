@@ -59,11 +59,11 @@ void draw() {
     rect(w-bs,6*bs,bs,bs);
     rect(w-bs,7*bs,bs,bs);
     fill(255,255,255);
-    rect(w-.6*bs,5.2*bs,.6*bs,.2*bs);
-    rect(w-.6*bs,7.2*bs,.6*bs,.2*bs);
+    rect(w-.8*bs,5.4*bs,.6*bs,.2*bs);
+    rect(w-.8*bs,7.4*bs,.6*bs,.2*bs);
     rect(w-.8*bs,7.4*bs,.2*bs,.6*bs);
     textSize(.8*bs);
-    text(brushSize, w-.2*bs,6.1*bs);  
+    text(brushSize, w-.1*bs,6.2*bs);  
 
 	//eraser
 	stroke(0,0,0);
