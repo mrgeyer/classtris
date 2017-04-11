@@ -24,6 +24,7 @@ h5 { text-family: Arial, sans-serif;
 	}
 td {
 	text-align: center;
+	vertical-align: top;
     border: 10px solid gray;
 	border-style: double;
     padding: 5px;
