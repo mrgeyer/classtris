@@ -159,6 +159,7 @@ function nextQuestion() {
 	}
 
 	function cycleNext() {
+		/*
 		if (questionsLoaded) {
 			nextQuestion();
 		}
@@ -187,10 +188,11 @@ function nextQuestion() {
 	}
 
 	function cycleThen1() {
+		/*
 		if (questionsLoaded) {
 			nextQuestion();
 		}
-		/*
+		
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
@@ -221,10 +223,11 @@ function nextQuestion() {
 	}
 
 	function cycleThen2() {
+		/*
 		if (questionsLoaded) {
 			nextQuestion();
 		}
-		/*
+		
 		var i = currentClass.indexOf(up[0])
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
