@@ -8,9 +8,11 @@ To try out the demo visit: https://punkbass.github.io/classtris/
 To use it, you need to load a class list and a question list from text files at the bottom of the page. On the lists, seperate names and questions with a new line. 
 Click choose file, then pick your file. Then click load class or load question.
 
+To have questions load randomly, click Random before loading the questions. To have questions load in order, click Linear before loading the questions.
+
 For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
 
-Example student list: https://github.com/punkbass/classtris/blob/master/students.txt
+Example student list: https://github.com/punkbass/classtris/blob/master/students.txt<br>
 Example question list: https://github.com/punkbass/classtris/blob/master/questions.txt
 
 You can add images to the question list by using the HTML tags. See the example question list for an example.
