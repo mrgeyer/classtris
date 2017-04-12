@@ -281,10 +281,11 @@ function nextQuestion() {
 		document.getElementById('t3p').innerHTML = tp[3];
 		document.getElementById('t4p').innerHTML = tp[0];
 		log += '\n' + up[0] + ": " + pt;
-		cycleNext();
+		
 		if (pt == 4) {
 			nextQuestion();
 		}
+		cycleNext();
 		
 	}
 	
