@@ -5,7 +5,7 @@ function saveTextAsFile()
 {
 	var textToWrite = log;
 	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-	var fileNameToSaveAs = classtrisLog + dv + ".txt";
+	var fileNameToSaveAs = "classtrisLog" + dv + ".txt";
 
 	var downloadLink = document.createElement("a");
 	downloadLink.download = fileNameToSaveAs;
