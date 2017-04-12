@@ -8,7 +8,7 @@ To try out the demo visit: https://punkbass.github.io/classtris/
 To use it, you need to load a class list from a text files at the bottom of the page. On the lists, seperate names and questions with a new line. 
 Click choose file, then pick your file. Then click load class list.
 
-To have questions load randomly, click Load random before loading the questions. To have questions load in order, click Load linear before loading the questions.
+To have questions load randomly, click Load Random to load the questions. To have questions load in order, click Load Linear to load the questions.
 
 For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
 
