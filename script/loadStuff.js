@@ -1,7 +1,7 @@
-var QuestionsLoaded = false;
+var log = Date();
 function saveTextAsFile()
 {
-	var textToWrite = document.getElementById("inputTextToSave").value;
+	var textToWrite = log;
 	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
 	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
 
@@ -150,6 +150,7 @@ function loadQuestions(mode)
 function nextQuestion() {
 		qs += 1;
 		
+		
 		n = dynamicQuest.length;
 		if (qs >= n-2) {
 			dynamicQuest.sort(function(a, b){return 0.5 - Math.random()});
@@ -158,6 +159,7 @@ function nextQuestion() {
 	
 		question = dynamicQuest[qs];
 		document.getElementById('question').innerHTML = question;	
+		log = log + '\n' + question;
 	}
 
 	function cycleNext() {
@@ -275,6 +277,7 @@ function nextQuestion() {
 		document.getElementById('t2p').innerHTML = tp[2];
 		document.getElementById('t3p').innerHTML = tp[3];
 		document.getElementById('t4p').innerHTML = tp[0];
+		log += '\n' + up[0] + ": " + pt;
 		
 	}
 	
@@ -297,6 +300,7 @@ function nextQuestion() {
 		}
 		congrats = "Congratulations " + winners.join(", ") + "!";
 		document.getElementById('question').innerHTML = congrats;
+		log += '\n' + congrats;
 	}
 
 	function setMode(mod) {
