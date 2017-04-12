@@ -147,7 +147,7 @@ function loadQuestions(mode)
 	}
 	fileReader.readAsText(fileToLoad, "UTF-8");
 	questionsLoaded = true;
-	log += '/r' + question;
+	log += '/n' + question;
 }
 
 function nextQuestion() {
@@ -162,7 +162,7 @@ function nextQuestion() {
 	
 		question = dynamicQuest[qs];
 		document.getElementById('question').innerHTML = question;	
-		log = log + '\r' + question;
+		log = log + '\n' + question;
 	}
 
 	function cycleNext() {
@@ -281,7 +281,7 @@ function nextQuestion() {
 		document.getElementById('t3p').innerHTML = tp[3];
 		document.getElementById('t4p').innerHTML = tp[0];
 		*/
-		log += '\r' + up[0] + ": " + pt;
+		log += '\n' + up[0] + ": " + pt;
 		
 		if (pt == 4) {
 			nextQuestion();
@@ -309,7 +309,7 @@ function nextQuestion() {
 		}
 		congrats = "Congratulations " + winners.join(", ") + "!";
 		document.getElementById('question').innerHTML = congrats;
-		log += '\r' + congrats;
+		log += '\n' + congrats;
 	}
 
 	function setMode(mod) {
