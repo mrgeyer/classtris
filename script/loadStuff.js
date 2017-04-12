@@ -147,6 +147,7 @@ function loadQuestions(mode)
 	}
 	fileReader.readAsText(fileToLoad, "UTF-8");
 	questionsLoaded = true;
+	log += question;
 }
 
 function nextQuestion() {
