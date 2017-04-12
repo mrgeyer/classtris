@@ -135,7 +135,7 @@ function loadQuestions(mode)
 
 		document.getElementById("inputTextToSave").value = textFromFileLoaded;
 		dynamicQuest = currentQuest;
-		if (mode = "random") {
+		if (mode == "random") {
 			dynamicQuest.sort(function(a, b){return 0.5 - Math.random()});
 		}
 		document.getElementById("inputTextToSave").value = dynamicQuest;
