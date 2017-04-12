@@ -44,6 +44,7 @@ function checkUndefined(thingie) {
 
 function loadClassList()
 {
+	var questMode = "ran";
 	var fileToLoad = document.getElementById("fileToLoad").files[0];
 
 	var fileReader = new FileReader();
@@ -135,7 +136,9 @@ function loadQuestions()
 
 		document.getElementById("inputTextToSave").value = textFromFileLoaded;
 		dynamicQuest = currentQuest;
-		dynamicQuest.sort(function(a, b){return 0.5 - Math.random()});
+		if (questMode = "ran") {
+			dynamicQuest.sort(function(a, b){return 0.5 - Math.random()});
+		}
 		document.getElementById("inputTextToSave").value = dynamicQuest;
 		question = dynamicQuest[0];
 		qs = 0;
@@ -295,4 +298,8 @@ function nextQuestion() {
 		}
 		congrats = "Congratulations " + winners.join(", ") + "!";
 		document.getElementById('question').innerHTML = congrats;
+	}
+
+	function setMode(mod) {
+		questMode = mod;
 	}
