@@ -78,7 +78,7 @@ void draw() {
 	if (isDraw === 1) {
 		noStroke();
 		fill(paintColor);
-		rect(mouseX, mouseY, brushSize, brushSize);
+		rect(mouseX-.5*brushSize, mouseY-.5*brushSize, brushSize, brushSize);
 	}
 
 
