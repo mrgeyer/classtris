@@ -71,13 +71,15 @@
 		<button onclick="loadQuestions('random')">Load Random</button>
 		<button onclick="loadQuestions('linear')">Load Linear</button></td>
 		
+		
 	</tr>
 	<tr>
 		<td>
 			
 			<button class="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='none'">Hide</button>
 			<button class="CTbutton" type="button" onclick="document.getElementById('inputTextToSave').style.display='block'">Show</button>
-	</td>
+			<button onclick="saveTextAsFile()">Save Log</button>
+		</td>
 		<td colspan= 3>
 			
 			<textarea id="inputTextToSave" style="width:700px;height:100px"></textarea>
