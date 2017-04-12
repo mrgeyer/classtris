@@ -147,7 +147,7 @@ function loadQuestions(mode)
 	}
 	fileReader.readAsText(fileToLoad, "UTF-8");
 	questionsLoaded = true;
-	log += question;
+	log += '/r' + question;
 }
 
 function nextQuestion() {
@@ -162,7 +162,7 @@ function nextQuestion() {
 	
 		question = dynamicQuest[qs];
 		document.getElementById('question').innerHTML = question;	
-		log = log + '\n' + question;
+		log = log + '\r' + question;
 	}
 
 	function cycleNext() {
@@ -275,12 +275,13 @@ function nextQuestion() {
 		} else if (team4.some(checkUp)) {
 			tp[0] += pt;	
 		}
-		
+		/*
 		document.getElementById('t1p').innerHTML = tp[1];
 		document.getElementById('t2p').innerHTML = tp[2];
 		document.getElementById('t3p').innerHTML = tp[3];
 		document.getElementById('t4p').innerHTML = tp[0];
-		log += '\n' + up[0] + ": " + pt;
+		*/
+		log += '\r' + up[0] + ": " + pt;
 		
 		if (pt == 4) {
 			nextQuestion();
@@ -308,7 +309,7 @@ function nextQuestion() {
 		}
 		congrats = "Congratulations " + winners.join(", ") + "!";
 		document.getElementById('question').innerHTML = congrats;
-		log += '\n' + congrats;
+		log += '\r' + congrats;
 	}
 
 	function setMode(mod) {
