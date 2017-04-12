@@ -1,9 +1,11 @@
-var log = Date();
+d = Date();
+dv = d.valueOf();
+var log = d;
 function saveTextAsFile()
 {
 	var textToWrite = log;
 	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+	var fileNameToSaveAs = classtrisLog + dv + ".txt";
 
 	var downloadLink = document.createElement("a");
 	downloadLink.download = fileNameToSaveAs;
