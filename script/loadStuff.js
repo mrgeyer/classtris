@@ -34,15 +34,15 @@ function destroyClickedElement(event)
 	document.body.removeChild(event.target);
 }
 
-/*
-function checkUndefined(thingie) {
-	if (thingie != undefined) {
-		if thingie != "") {
-			return thingie;
-		}
-	}
+
+function checkUndefined(stud) {
+    return stud != undefined;
 }
-*/
+
+function checkBlank(stud) {
+    return stud != "";
+}
+
 
 function loadClassList()
 {
@@ -54,9 +54,9 @@ function loadClassList()
 		var textFromFileLoaded = fileLoadedEvent.target.result;
 		currentClass = textFromFileLoaded .split("\n");
 
-		/*
-		currentClass = checkClass.filter(checkUndefined);
-		*/
+
+		currentClass = currentClass.filter(checkUndefined);
+		currentClass = currentClass.filter(checkBlank);
 
 
 		document.getElementById("inputTextToSave").value = textFromFileLoaded;
@@ -117,6 +117,7 @@ function loadClassList()
 		
 	}
 	fileReader.readAsText(fileToLoad, "UTF-8");
+	log += '\n' + Date();
 }
 
 
@@ -130,9 +131,8 @@ function loadQuestions(mode)
 		var textFromFileLoaded = fileLoadedEvent.target.result;
 		currentQuest = textFromFileLoaded .split("\n");
 
-		/*
-		currentClass = checkClass.filter(checkUndefined);
-		*/
+		currentQuest = currentQuest.filter(checkUndefined);
+		currentQuest = currentQuest.filter(checkBlank);
 
 
 		document.getElementById("inputTextToSave").value = textFromFileLoaded;
@@ -162,7 +162,7 @@ function nextQuestion() {
 	
 		question = dynamicQuest[qs];
 		document.getElementById('question').innerHTML = question;	
-		log = log + '\n' + question;
+		//log = log + '\n' + question;
 	}
 
 	function cycleNext() {
@@ -309,7 +309,7 @@ function nextQuestion() {
 		}
 		congrats = "Congratulations " + winners.join(", ") + "!";
 		document.getElementById('question').innerHTML = congrats;
-		log += '\n' + congrats;
+		//log += '\n' + congrats;
 	}
 
 	function setMode(mod) {
