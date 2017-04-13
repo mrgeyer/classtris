@@ -26,7 +26,7 @@ To load a new question, click UP above the student's name or ? in the top menu.
 
 ## Teams and Points
 
-Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Click GG to show the winning team. Students will not know who is on their team unless they are on the winning team.
+Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Clicking the score buttons loads the next student in the que. Clicking the 4 pt score button loads the next question. Click GG to show the winning team. Students will not know who is on their team unless they are on the winning team. To download a spreadsheet of points awarded to each student, click Save Log in the bottom left
 
 ## Blakboard
 To display the Blackboard, click BB in the top menu. To hide the blackboard click HIDE in the top menu.
@@ -40,7 +40,7 @@ To display the Blackboard, click BB in the top menu. To hide the blackboard clic
  
 This app is designed for teachers who prefer the Johnny-on-the-spot type of questioning. It enables them to delegate the task of selecting students randomly to the computer and focus on teaching. 
  
- This app was developed based on issues I observed during classroom observations. I observed a teacher using questions to encourage student engagement. However, calling on students who are not paying attention does not set them up for a successful experience and leads to further frustration with the class and potentially harms the student's disposition towards the subject and the teacher. Using this app allows the student to mentally prepare for their turn to answer questions and sets them up for a successful and positive experience. It also reduces the likelihood that a student will feel singled out by the teacher.
+ This app was developed based on issues I observed during classroom observations. I observed a teacher using questions to encourage student engagement. However, calling on students who are not paying attention does not set them up for a successful experience and leads to further frustration with the class. Using this app allows the student to mentally prepare for their turn to answer questions and sets them up for a successful and positive experience. It also reduces the likelihood that a student will feel singled out by the teacher.
 
 The reason that I choose to have blind team assignment is to avoid issues that I observed in team based activities. When students make mistakes during team activities, their team mates get upset and frustrated and heated exchanges have occured. Since students do not know who is on their team unless their team wins. Therefore, such frustrations with teammates should be avoided entirely. 
  
