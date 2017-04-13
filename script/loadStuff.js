@@ -5,7 +5,7 @@ function saveTextAsFile()
 {
 	var textToWrite = log;
 	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
-	var fileNameToSaveAs = "classtrisLog" + dv + ".txt";
+	var fileNameToSaveAs = "classtrisLog" + dv + ".csv";
 
 	var downloadLink = document.createElement("a");
 	downloadLink.download = fileNameToSaveAs;
@@ -147,7 +147,7 @@ function loadQuestions(mode)
 	}
 	fileReader.readAsText(fileToLoad, "UTF-8");
 	questionsLoaded = true;
-	log += '/n' + question;
+	//log += '/n' + question;
 }
 
 function nextQuestion() {
@@ -281,7 +281,7 @@ function nextQuestion() {
 		document.getElementById('t3p').innerHTML = tp[3];
 		document.getElementById('t4p').innerHTML = tp[0];
 		*/
-		log += '\n' + up[0] + ": " + pt;
+		log += '\n' + up[0] + "," + pt;
 		
 		if (pt == 4) {
 			nextQuestion();
