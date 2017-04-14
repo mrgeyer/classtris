@@ -73,7 +73,7 @@ void draw() {
 	rect(w-bs,8*bs,bs,bs);
 	fill(255,0,0);
     textSize(.8*bs);
-    text("E", w-.9*bs, h-.2*bs);  
+    text("E", w-.9*bs, 8.8*bs);  
 
 	if (isDraw === 1) {
 		noStroke();
