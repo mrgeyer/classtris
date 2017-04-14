@@ -166,7 +166,7 @@ void mousePressed() {
 		}
 		
 		// eraser
-		if (mouseY > 8*bs && mouseY < 9*bs) {
+		if (mouseY > 8*bs && mouseY < 9.5*bs) {
 		    clear = true;
 		}
 	}
