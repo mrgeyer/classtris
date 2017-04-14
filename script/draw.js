@@ -70,7 +70,7 @@ void draw() {
 	//eraser
 	stroke(0,0,0);
 	fill(0,0,0);
-	rect(w-bs,h-bs,bs,bs);
+	rect(w-bs,8*bs,bs,bs);
 	fill(255,0,0);
     textSize(.8*bs);
     text("E", w-.9*bs, h-.2*bs);  
@@ -166,7 +166,7 @@ void mousePressed() {
 		}
 		
 		// eraser
-		if (mouseY > h-bs) {
+		if (mouseY > 8*bs && mouseY < 9*bs) {
 		    clear = true;
 		}
 	}
