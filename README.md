@@ -15,6 +15,8 @@ For confirmation, questions and students are shown in a text box under the load 
 Example student list: https://github.com/punkbass/classtris/blob/master/students.txt<br>
 Example question list: https://github.com/punkbass/classtris/blob/master/questions.txt
 
+To generate systems of linear equation problems, visit: https://punkbass.github.io/Classtris-Systems-of-Linear-Equations-Question-Generator/
+
 You can add images to the question list by using the HTML tags. See the example question list for an example.
 To do more than one line, use the br html tag. See the example question list for an example
 
