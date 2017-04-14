@@ -282,6 +282,7 @@ function nextQuestion() {
 		document.getElementById('t4p').innerHTML = tp[0];
 		*/
 		log += '\n' + up[0] + "," + pt;
+		document.getElementById("inputTextToSave").value = log;
 		
 		if (pt == 4) {
 			nextQuestion();
