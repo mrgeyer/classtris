@@ -3,22 +3,22 @@
 body {
 	background-color: #333333;
 	}
-h1 { text-family: Arial, sans-serif;
+h1 { font-family: Courier New, monospaced;
 	font-size: 40px;
 	}
-h2 { text-family: Arial, sans-serif;
+h2 { font-family: Arial, sans-serif;
 	 color: red;
 	font-size: 20px;
 	}
-h3 { text-family: Arial, sans-serif;
+h3 { font-family: Arial, sans-serif;
 	 color: orange;
 	font-size: 20px;
 	}
-h4 { text-family: Arial, sans-serif;
+h4 { font-family: Arial, sans-serif;
 	 color: yellow;
 	font-size: 20px;
 	}
-h5 { text-family: Arial, sans-serif;
+h5 { font-family: Arial, sans-serif;
 	 color: magenta;
 	font-size: 20px;
 	}
@@ -39,7 +39,7 @@ studentCols td {
 	width: 100px;
 }
 .question {
-	text-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 20px;
 	color: white;
 }
