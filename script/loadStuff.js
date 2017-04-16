@@ -289,7 +289,9 @@ function nextQuestion() {
 		if (pt == 4) {
 			nextQuestion();
 		}
-		cycleNext();
+		if (pt > 1) {
+			cycleNext();
+		}
 		
 	}
 	
