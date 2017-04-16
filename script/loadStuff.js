@@ -1,6 +1,7 @@
-d = Date();
-dv = d.valueOf();
+var d = Date();
+var dv = d.valueOf();
 var log = d;
+var questionsLoaded = false;
 function saveTextAsFile()
 {
 	var textToWrite = log;
@@ -289,7 +290,9 @@ function nextQuestion() {
 		document.getElementById("inputTextToSave").value = log;
 		
 		if (pt == 4) {
-			nextQuestion();
+			if (questionsLoaded) {
+				nextQuestion();
+			}
 		}
 		if (pt > 1) {
 			cycleNext();
