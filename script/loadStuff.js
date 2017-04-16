@@ -244,7 +244,7 @@ function nextQuestion() {
 		up[1] = up[2];
 		up[2] = up[3];
 		up[3] = document.getElementById('then2').value;
-		document.getElementById('then2').value = (up[3] + " successfully added.");
+		
 		log += up[3] + ", manually added";
 		
 
@@ -256,7 +256,7 @@ function nextQuestion() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = (up[3] + " successfully added.");
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
