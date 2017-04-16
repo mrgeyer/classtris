@@ -246,7 +246,8 @@ function nextQuestion() {
 		up[2] = up[3];
 		up[3] = document.getElementById('then2').value;
 		
-		log += up[3] + ", manually added";
+		log += '\n' + up[3] + ", manually added";
+		document.getElementById("inputTextToSave").value = log;
 		
 
 		n = dynamicClass.length;
