@@ -30,15 +30,17 @@ Questions are loaded in a similar fashion..
 - To load the THEN student in the que, press THEN above the student's names.
 - To manually enter a student, enter the student's name in the text field under the LATER button and click the LATER button. It will move the students in the que up one and place the student whose name you tyed in the que. The student will not be placed in the que if you do not click LATER.To confime that a student is added to the que, it will say successfully added and a log entry will be posted saying manual entry.
 
-- To load a new question, click UP above the student's name or the ? in the top menu. Clicking 4 will also load the next question and award 4 points to the student and the student's team.
+- To load a new question, click the ? in the top menu. Clicking 4 will also load the next question and award 4 points to the student and the student's team.
 
 ## Teams and Points
 
 - Students are randomly put on 4 teams when students are loaded.
-- To award points to a student and the student's team, click 1,2,3,or 4 when they are UP. 
+- To award points to a student and the student's team, click 1,2,3,or 4 or UP when they are UP. 
+- Clicking 1 or UP will award 1 point to the student and the student's team.
+- Clicking 2,3,4 will award 2,3,4 points respectively to the student tand the student's team.
 - Clicking 2,3,4 loads the NEXT student in the que. 
-- Clicking 1 will not load the NEXT student.
-- If you want to use the THEN or LATER buttons, use 1 to give the student who is currently UP points before clicking NEXT or LATER.
+- Clicking 1 or UP will not load the NEXT student.
+- If you want to use the THEN or LATER buttons, use 1 or UP to give the student who is currently UP points before clicking NEXT or LATER.
 - Clicking the 4 pt score button loads the next question. 
 - Click GG (good game) to show the winning team. Students will not know who is on their team unless they are on the winning team. 
 - To download a spreadsheet of points awarded to each student, click Save Log in the bottom left
