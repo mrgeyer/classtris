@@ -326,8 +326,8 @@ function nextQuestion() {
 	}
 
 	function setModeQP(mode) {
-		nextQwhenPt = mode;
+		loadQwhenPt = mode;
 	}
 	function setModeNP(mode) {
-		nextNwhenPt = mode;
+		loadNwhenPt = mode;
 	}
