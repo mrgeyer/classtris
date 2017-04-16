@@ -204,10 +204,10 @@ function nextQuestion() {
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
-		q++
+		//q++
 		up[0] = up[2];
 		up[2] = up[3];
-		up[3] = dynamicClass[q];
+		up[3] = document.getElementById('then2').value;
 		
 
 		n = dynamicClass.length;
