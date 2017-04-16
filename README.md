@@ -44,10 +44,8 @@ This app is designed for teachers who prefer the Johnny-on-the-spot type of ques
  
  This app was developed based on issues I observed during classroom observations. I observed a teacher using questions to encourage student engagement. However, calling on students who are not paying attention does not set them up for a successful experience and leads to further frustration with the class. Using this app allows the student to mentally prepare for their turn to answer questions and sets them up for a successful and positive experience. It also reduces the likelihood that a student will feel singled out by the teacher.
 
-The reason that I choose to have blind team assignment is to avoid issues that I observed in team based activities. When students make mistakes during team activities, their team mates get upset and frustrated and heated exchanges have occured. Since students do not know who is on their team unless their team wins. Therefore, such frustrations with teammates should be avoided entirely. 
- 
-### Known issues
-Blank questions and student names. I recommend using blank names and questions as a wildcard until it gets fixed. 
+The reason that I choose to have blind team assignment is to avoid issues that I observed in team based activities. When students make mistakes during team activities, their team mates get upset and frustrated and heated exchanges have occured. Since students do not know who is on their team unless their team wins, such frustrations with teammates should be avoided entirely. 
+
 
 ### Credits
  
