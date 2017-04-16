@@ -5,10 +5,10 @@ To try out the demo visit: https://punkbass.github.io/classtris/
 
 ## Load Students and Questions
 
-To use it, you need to load a class list from a text files at the bottom of the page. On the lists, seperate names and questions with a new line. 
+To use Classtris, you need to load a class list from a text files at the bottom of the page. On the lists, seperate names and questions with a new line. 
 Click choose file, then pick your file. Then click load class list.
 
-To have questions load randomly, click Load Random to load the questions. To have questions load in order, click Load Linear to load the questions.
+To load questions randomly, click Load Random to load the questions. To have questions load in order, click Load Linear to load the questions.
 
 For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
 
@@ -22,13 +22,14 @@ To do more than one line, use the br html tag. See the example question list for
 
 ## Que buttons
 
-To load the next student, click the yellow guy on the top menu or NEXT above the student's name 
-To load other students in the que, press THEN above the student's names
-To load a new question, click UP above the student's name or ? in the top menu.
+-To load the next student, click the yellow guy on the top menu or NEXT above the student's name 
+-To load the NEXT or THEN student or  in the que, press THEN above the student's names
+-To manually enter a student, enter the student's name in the text field under the LATER button and click the LATER button. It will move the students in the que up one and place the student whose name you tyed in the que. The student will not be placed in the que if you do not click LATER.
+-To load a new question, click UP above the student's name or ? in the top menu.
 
 ## Teams and Points
 
-Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are up. Clicking the score buttons loads the next student in the que. Clicking the 4 pt score button loads the next question. Click GG to show the winning team. Students will not know who is on their team unless they are on the winning team. To download a spreadsheet of points awarded to each student, click Save Log in the bottom left
+Students are randomly put on 4 teams when students are loaded. To award points to a student's team, click 1,2,3,4 when they are UP. Clicking 2,3,4 loads the NEXT student in the que. Clicking 1 will not load the NEXT student. Clicking the 4 pt score button loads the next question. Click GG to show the winning team. Students will not know who is on their team unless they are on the winning team. To download a spreadsheet of points awarded to each student, click Save Log in the bottom left
 
 ## Blakboard
 To display the Blackboard, click BB in the top menu. To hide the blackboard click HIDE in the top menu.
