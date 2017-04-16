@@ -2,8 +2,8 @@ var d = Date();
 var dv = d.valueOf();
 var log = d;
 var questionsLoaded = false;
-var loadQwhenPt = 5;
-var loadNwhenPt = 5;
+var loadQwhenPt = 9;
+var loadNwhenPt = 9;
 function saveTextAsFile()
 {
 	var textToWrite = log;
@@ -325,6 +325,9 @@ function nextQuestion() {
 		//log += '\n' + congrats;
 	}
 
-	function setMode(lol, mode) {
-		lol = mode;
+	function setModeQP(mode) {
+		nextQwhenPt = mode;
+	}
+	function setModeNP(mode) {
+		nextNwhenPt = mode;
 	}
