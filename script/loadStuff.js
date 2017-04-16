@@ -107,7 +107,7 @@ function loadClassList()
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').innerHTML = up[3];
+		document.getElementById('then2').value = up[3];
 
 		
 		if (up[1] === undefined) {
@@ -189,7 +189,7 @@ function nextQuestion() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').innerHTML = up[3];
+		document.getElementById('then2').value = up[3];
 		//document.getElementById('q').innerHTML = q;
 		
 	}
@@ -218,7 +218,7 @@ function nextQuestion() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').innerHTML = up[3];
+		document.getElementById('then2').value = up[3];
 		
 		// debug script
 		//document.getElementById('q').innerHTML = q;
@@ -252,7 +252,7 @@ function nextQuestion() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').innerHTML = up[3];
+		document.getElementById('then2').value = up[3];
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
