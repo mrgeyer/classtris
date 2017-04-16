@@ -302,6 +302,25 @@ function nextQuestion() {
 		}
 		
 	}
+
+function clickedUP() {
+		pt = 1;
+		if (team1.some(checkUp)) {
+			tp[1] += pt;
+		} else if (team2.some(checkUp)) {
+			tp[2] += pt;
+		} else if (team3.some(checkUp)) {
+			tp[3] += pt;	
+		} else if (team4.some(checkUp)) {
+			tp[0] += pt;	
+		}
+		/*
+		document.getElementById('t1p').innerHTML = tp[1];
+		document.getElementById('t2p').innerHTML = tp[2];
+		document.getElementById('t3p').innerHTML = tp[3];
+		document.getElementById('t4p').innerHTML = tp[0];
+		*/
+	}
 	
 	function gameOver() {
 		highScore = Math.max(tp[0],tp[1],tp[2],tp[3]);
