@@ -2,6 +2,8 @@ var d = Date();
 var dv = d.valueOf();
 var log = d;
 var questionsLoaded = false;
+var loadQwhenPt = 5;
+var loadNwhenPt = 5;
 function saveTextAsFile()
 {
 	var textToWrite = log;
@@ -290,12 +292,12 @@ function nextQuestion() {
 		log += '\n' + up[0] + "," + pt;
 		document.getElementById("inputTextToSave").value = log;
 		
-		if (pt == 4) {
+		if (pt >= loadQwhenPt) {
 			if (questionsLoaded) {
 				nextQuestion();
 			}
 		}
-		if (pt > 1) {
+		if (pt >= loadNwhenPt) {
 			cycleNext();
 		}
 		
@@ -323,6 +325,6 @@ function nextQuestion() {
 		//log += '\n' + congrats;
 	}
 
-	function setMode(mod) {
-		questMode = mod;
+	function setMode(lol, mode) {
+		lol = mode;
 	}
