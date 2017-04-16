@@ -60,7 +60,8 @@
 -->
 
 	<tr>
-		<td colspan = 4 text-align="left">Load Class List from Text File: 
+		<td colspan = 4 text-align="left">
+		Load Class List from Text File: 
 		<input type="file" id="fileToLoad">
 		<button onclick="loadClassList()">Load</button></td>
 	</tr>
@@ -75,21 +76,25 @@
 		
 		
 	</tr>
-		
-	<tr><td>Load Next Question when points awarded: 
-		<button class="CTbutton" onclick="setMode(loadQwhenPt,1)"  >≥1</button>
-		<button class="CTbutton" onclick="setMode(loadQwhenPt,2)"  >≥2</button>
-		<button class="CTbutton" onclick="setMode(loadQwhenPt,3)"  >≥3</button>
-		<button class="CTbutton" onclick="setMode(loadQwhenPt,4)"  >≥4</button>
-		<button class="CTbutton" onclick="setMode(loadQwhenPt,99)"  >Off</button>
+	
+
+	<tr><td colspan = 4 text-align="left">
+		Load Next Student when points awarded: 
+		<button class="CTbutton" onclick="setModeNP(1)"  >≥1</button>
+		<button class="CTbutton" onclick="setModeNP(2)"  >≥2</button>
+		<button class="CTbutton" onclick="setModeNP(3)"  >≥3</button>
+		<button class="CTbutton" onclick="setModeNP(4)"  >≥4</button>
+		<button class="CTbutton" onclick="setModeNP(99)"  >Off</button>
 	    </td>
-		<td>Load Next Student when points awarded: 
-		<button class="CTbutton" onclick="setMode(loadNwhenPt,1)"  >≥1</button>
-		<button class="CTbutton" onclick="setMode(loadNwhenPt,2)"  >≥2</button>
-		<button class="CTbutton" onclick="setMode(loadNwhenPt,3)"  >≥3</button>
-		<button class="CTbutton" onclick="setMode(loadNwhenPt,4)"  >≥4</button>
-		<button class="CTbutton" onclick="setMode(loadNwhenPt,99)"  >Off</button>
-	    </td>
+	</tr>	
+	<tr><td colspan = 4 text-align="left">
+		Load Next Question when points awarded: 
+		<button class="CTbutton" onclick="setModeQP(1)"  >≥1</button>
+		<button class="CTbutton" onclick="setModeQP(2)"  >≥2</button>
+		<button class="CTbutton" onclick="setModeQP(3)"  >≥3</button>
+		<button class="CTbutton" onclick="setModeQP(4)"  >≥4</button>
+		<button class="CTbutton" onclick="setModeQP(99)"  >Off</button>
+	     </td>
 	</tr>
 	<tr>
 		<td>
