@@ -244,7 +244,7 @@ function nextQuestion() {
 		up[1] = up[2];
 		up[2] = up[3];
 		up[3] = document.getElementById('then2').value;
-		document.getElementById('then2').value = up[3] + " successfully added.";
+		document.getElementById('then2').value = (up[3] + " successfully added.");
 		log += up[3] + ", manually added";
 		
 
