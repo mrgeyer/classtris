@@ -102,7 +102,7 @@ void keyPressed() {
 		if (typeCursorX === -1) {
 			typeCursorX = mouseX;
 			typeCursorY = mouseY;
-		} else if (typeCursorX > w-ts*1.3) {
+		} else if (typeCursorX > w-bs-ts*1.3) {
 			typeCursorX = 0;
 			typeCursorY = typeCursorY + ts;
 		} else {
