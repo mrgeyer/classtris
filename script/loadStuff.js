@@ -104,9 +104,9 @@ function loadClassList()
 
 
 		for (i = 0; i < 4; i++) {
-			up[i] = dynamicClass[i];
+			up[i] = dynamicClass.shift();
 		}
-		q = 0;
+		//q = 0;
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
@@ -181,13 +181,14 @@ function nextQuestion() {
 		q++
 		up.shift();
 
-		up[3] = dynamicClass[q];
+		up[3] = dynamicClass.shift();
 		
 
 		n = dynamicClass.length;
-		if (q >= n-2) {
+		if (n <= 1) {
+			dynamicClass = currentClass;
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-			q = 0;
+			//q = 0;
 		}
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
@@ -207,16 +208,17 @@ function nextQuestion() {
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
-		q++
+		//q++
 		up[0] = up[2];
 		up[2] = up[3];
-		up[3] = dynamicClass[q];
+		up[3] = dynamicClass.shift();
 		
 
 		n = dynamicClass.length;
-		if (q >= n-2) {
+		if (n <= 1) {
+			dynamicClass = currentClass;
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-			q = 0;
+			//q = 0;
 		}
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
@@ -253,11 +255,12 @@ function nextQuestion() {
 		document.getElementById("inputTextToSave").value = log;
 		
 
-		n = dynamicClass.length;
+		/*n = dynamicClass.length;
 		if (q >= n-2) {
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 			q = 0;
 		}
+		*/
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
