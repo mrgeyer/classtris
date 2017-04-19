@@ -168,14 +168,14 @@ function nextQuestion() {
 		//log = log + '\n' + question;
 	}
 
-	function checkDC() {
-		var n = dynamicClass.length;
-		if (n == 0) {
-			dynamicClass = currentClass;
-			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-			//q = 0;
-		}
+function checkDC() {
+	var n = dynamicClass.length;
+	if (n == 0) {
+		dynamicClass = currentClass;
+		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+		//q = 0;
 	}
+}
 
 	function cycleNext() {
 		/*
@@ -193,7 +193,7 @@ function nextQuestion() {
 		up[3] = dynamicClass.shift();
 		
 
-		checkDC();
+		dynamicClass.push(currentClass[Math.floor(Math.random() * currentClass.length)]);
 		
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
@@ -218,7 +218,7 @@ function nextQuestion() {
 		up[2] = up[3];
 		up[3] = dynamicClass.shift();
 		
-		checkDC();
+		dynamicClass.push(currentClass[Math.floor(Math.random() * currentClass.length)]);
 		
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
