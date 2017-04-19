@@ -184,8 +184,8 @@ function nextQuestion() {
 		up[3] = dynamicClass.shift();
 		
 
-		n = dynamicClass.length;
-		if (n <= 1) {
+		var n = dynamicClass.length;
+		if (n < 2) {
 			dynamicClass = currentClass;
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 			//q = 0;
@@ -214,8 +214,8 @@ function nextQuestion() {
 		up[3] = dynamicClass.shift();
 		
 
-		n = dynamicClass.length;
-		if (n <= 1) {
+		var n = dynamicClass.length;
+		if (n < 2) {
 			dynamicClass = currentClass;
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 			//q = 0;
