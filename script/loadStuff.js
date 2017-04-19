@@ -248,6 +248,10 @@ function checkDC() {
 		//up[0] = up[1];
 		//up[1] = up[2];
 		//up[2] = up[3];
+		if (document.getElementById('then2').value === "") {
+			document.getElementById('then2').value = "Error";
+			document.getElementById('then2').value = "";
+		} else {
 		dynamicClass.unshift(up[3]);
 		up[3] = document.getElementById('then2').value;
 		
@@ -271,7 +275,8 @@ function checkDC() {
 		if (up[1] === undefined) {
 			cycleNext();
 		}
-		*/	
+		*/
+		}
 	}
 
 	function checkUp(player) {
