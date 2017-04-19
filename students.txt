@@ -6,7 +6,7 @@ Adriane
 Micheal
 Sally
 Larry
-Alyesh
+Aleysh
 Alicia
 Doug
 Bob
@@ -33,3 +33,17 @@ Xavier
 Yaz
 Paz
 Zaria
+Claudia
+Carol
+Colby
+Leah
+Maria
+Nhi
+Saurabh
+Teneala
+Veronica
+Zach
+Casey
+Adam
+Scott
+Holly
