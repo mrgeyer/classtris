@@ -28,7 +28,7 @@ Questions are loaded in a similar fashion..
 
 - To load the next student, click the yellow guy on the top menu or NEXT above the student's name.
 - To load the THEN student in the que, press THEN above the student's names.
-- To manually enter a student, enter the student's name in the text field under the LATER button and click the LATER button. It will move the students in the que up one and place the student whose name you tyed in the que. The student will not be placed in the que if you do not click LATER.To confime that a student is added to the que, it will say successfully added and a log entry will be posted saying manual entry.
+- To manually enter a student, enter the student's name in the text field under the LATER button and click the LATER button. The student will not be placed in the que if you do not click LATER. The field will become blank after the student is added to the que. A log entry will be posted saying manual entry.
 
 - To load a new question, click the ? in the top menu. 
 
