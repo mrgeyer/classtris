@@ -246,7 +246,7 @@ function nextQuestion() {
 		//up[0] = up[1];
 		//up[1] = up[2];
 		//up[2] = up[3];
-		dynamicClass.unshift(up[3];
+		dynamicClass.unshift(up[3]);
 		up[3] = document.getElementById('then2').value;
 		
 		log += '\n' + up[3] + ", manually added";
