@@ -243,9 +243,10 @@ function nextQuestion() {
 		dynamicClass.push(up[0] + xp[i]);
 		*/
 		//q++
-		up[0] = up[1];
-		up[1] = up[2];
-		up[2] = up[3];
+		//up[0] = up[1];
+		//up[1] = up[2];
+		//up[2] = up[3];
+		dynamicClass.unshift(up[3];
 		up[3] = document.getElementById('then2').value;
 		
 		log += '\n' + up[3] + ", manually added";
@@ -260,7 +261,7 @@ function nextQuestion() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = (up[3] + " successfully added.");
+		document.getElementById('then2').value = (up[3] + " get ready!");
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
