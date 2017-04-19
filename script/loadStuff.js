@@ -104,13 +104,13 @@ function loadClassList()
 
 
 		for (i = 0; i < 4; i++) {
-			up[i] = dynamicClass[i];
+			up[i] = dynamicClass.shift();
 		}
-		q = 0;
+		//q = 0;
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = "";
 
 		
 		if (up[1] === undefined) {
@@ -168,6 +168,15 @@ function nextQuestion() {
 		//log = log + '\n' + question;
 	}
 
+function checkDC() {
+	var n = dynamicClass.length;
+	if (n == 0) {
+		dynamicClass = currentClass;
+		dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
+		//q = 0;
+	}
+}
+
 	function cycleNext() {
 		/*
 		if (questionsLoaded) {
@@ -178,21 +187,18 @@ function nextQuestion() {
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
-		q++
+		//q++
 		up.shift();
 
-		up[3] = dynamicClass[q];
+		up[3] = dynamicClass.shift();
 		
 
-		n = dynamicClass.length;
-		if (q >= n-2) {
-			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-			q = 0;
-		}
+		dynamicClass.push(currentClass[Math.floor(Math.random() * currentClass.length)]);
+		
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = "";
 		//document.getElementById('q').innerHTML = q;
 		
 	}
@@ -207,21 +213,17 @@ function nextQuestion() {
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
-		q++
+		//q++
 		up[0] = up[2];
 		up[2] = up[3];
-		up[3] = dynamicClass[q];
+		up[3] = dynamicClass.shift();
 		
-
-		n = dynamicClass.length;
-		if (q >= n-2) {
-			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
-			q = 0;
-		}
+		dynamicClass.push(currentClass[Math.floor(Math.random() * currentClass.length)]);
+		
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = "";
 		
 		// debug script
 		//document.getElementById('q').innerHTML = q;
@@ -243,24 +245,27 @@ function nextQuestion() {
 		dynamicClass.push(up[0] + xp[i]);
 		*/
 		//q++
-		up[0] = up[1];
-		up[1] = up[2];
-		up[2] = up[3];
+		//up[0] = up[1];
+		//up[1] = up[2];
+		//up[2] = up[3];
+		dynamicClass.unshift(up[3]);
 		up[3] = document.getElementById('then2').value;
 		
 		log += '\n' + up[3] + ", manually added";
 		document.getElementById("inputTextToSave").value = log;
 		
 
-		n = dynamicClass.length;
+		/*n = dynamicClass.length;
 		if (q >= n-2) {
 			dynamicClass.sort(function(a, b){return 0.5 - Math.random()});
 			q = 0;
 		}
+		*/
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = (up[3] + " successfully added.");
+		document.getElementById('then2').value = "";
+		//document.getElementById('then2').value = (up[3] + " get ready!");
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
