@@ -178,7 +178,7 @@ function nextQuestion() {
 		xp[i] += Number(xpee);
 		dynamicClass.push(up[0] + xp[i]);
 		*/
-		q++
+		//q++
 		up.shift();
 
 		up[3] = dynamicClass.shift();
