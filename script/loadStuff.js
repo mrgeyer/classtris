@@ -110,7 +110,7 @@ function loadClassList()
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		//document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = "";
 
 		
 		if (up[1] === undefined) {
@@ -198,7 +198,7 @@ function checkDC() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		//document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = "";
 		//document.getElementById('q').innerHTML = q;
 		
 	}
@@ -223,7 +223,7 @@ function checkDC() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		//document.getElementById('then2').value = up[3];
+		document.getElementById('then2').value = "";
 		
 		// debug script
 		//document.getElementById('q').innerHTML = q;
@@ -264,7 +264,8 @@ function checkDC() {
 		document.getElementById('up').innerHTML = up[0];
 		document.getElementById('next').innerHTML = up[1];
 		document.getElementById('then1').innerHTML = up[2];
-		document.getElementById('then2').value = (up[3] + " get ready!");
+		document.getElementById('then2').value = "";
+		//document.getElementById('then2').value = (up[3] + " get ready!");
 		//document.getElementById('q').innerHTML = q;
 		/*
 		if (up[1] === undefined) {
