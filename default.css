@@ -63,5 +63,10 @@ table {
 a {
     color: white;
 }
+
+textarea#then2 {
+	background-color: #000000;
+	color: white;
+}
 </style>
 </html>
