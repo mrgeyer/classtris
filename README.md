@@ -49,15 +49,6 @@ Questions are loaded in a similar fashion..
  - Hold down mouse to draw. Type letters to write where the mouse is pointing. Click the screen to change the text location.
 -  Click E to erase the blackboard. Click colors to switch colors. Click the plus and minus to change the size of the pen.
 - Click next to move the next student to the up position.
- 
- ## Background information
- 
-This app is designed for teachers who prefer the Johnny-on-the-spot type of questioning. It enables them to delegate the task of selecting students randomly to the computer and focus on teaching. 
- 
- This app was developed based on issues I observed during classroom observations. I observed a teacher using questions to encourage student engagement. However, calling on students who are not paying attention does not set them up for a successful experience and leads to further frustration with the class. Using this app allows the student to mentally prepare for their turn to answer questions and sets them up for a successful and positive experience. It also reduces the likelihood that a student will feel singled out by the teacher.
-
-The reason that I choose to have blind team assignment is to avoid issues that I observed in team based activities. When students make mistakes during team activities, their team mates get upset and frustrated and heated exchanges have occured. Since students do not know who is on their team unless their team wins, such frustrations with teammates should be avoided entirely. 
-
 
 ### Credits
  
