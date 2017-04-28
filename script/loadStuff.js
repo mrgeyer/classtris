@@ -34,7 +34,6 @@ function saveTextAsFile()
 		downloadLink.style.display = "none";
 		document.body.appendChild(downloadLink);
 	}
-
 	downloadLink.click();
 }
 
