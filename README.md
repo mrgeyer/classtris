@@ -9,7 +9,7 @@ To use Classtris, you need to load a class list from a text files at the bottom 
 - On the lists, seperate names and questions with a new line. 
 - Click choose file, then pick your file. Then click load class list.
 - For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
-- Example student list: https://punkbass.github.io/classtris/students.txt<br>
+- Example student list: https://punkbass.github.io/classtris/students.txt [Right click and pick save as]
 
 Questions are loaded in a similar fashion..
 - You must put each question on a seperate line in a text file. 
@@ -19,7 +19,7 @@ Questions are loaded in a similar fashion..
 - To load questions randomly, click Load Random to load the questions. 
 - To have questions load in order, click Load Linear to load the questions.
 - For confirmation, questions and students are shown in a text box under the load buttons. You can hide this by clicking hide.
-- Example question list: https://punkbass.github.io/classtris/questions.txt
+- Example question list: https://punkbass.github.io/classtris/questions.txt [Right click and pick save as]
 - To generate systems of linear equation problems, visit: https://punkbass.github.io/Classtris-Systems-of-Linear-Equations-Question-Generator/
 
 
