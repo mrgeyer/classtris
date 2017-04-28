@@ -4,12 +4,6 @@ var log = d;
 var questionsLoaded = false;
 var loadQwhenPt = 9;
 var loadNwhenPt = 9;
-/*
-function setbg()
-{
-	document.getElementById("styled").style.background-color="#FF00FF";
-} 
-*/
 function saveTextAsFile()
 {
 	var textToWrite = log;
