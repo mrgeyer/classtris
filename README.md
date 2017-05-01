@@ -1,7 +1,7 @@
 # classtris
 A Classroom management tool based on Tetris that features a student que.
 
-To try out the demo visit: https://punkbass.github.io/classtris/
+To try out the demo visit: https://methodsofmath.github.io/classtris/
 
 ## Load Students and Questions
 
