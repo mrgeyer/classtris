@@ -17,13 +17,13 @@ var bs = 30; 	// brush size
 void setup() { 
   size(w, h);
 }
-
+/*
 function setWH() {
 	w = document.getElementById("wid").value;
 	h = document.getElementById("hei").value;
 	setup();
 }
-
+*/
 
 
 void draw() {
