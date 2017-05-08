@@ -44,7 +44,7 @@ Questions are loaded in a similar fashion..
 - Click GG (good game) to show the winning team. Students will not know who is on their team unless they are on the winning team. 
 - To download a spreadsheet of points awarded to each student, click Save Log in the bottom left
 
-## Blakboard
+## Blackboard
 - To display the Blackboard, click BB in the top menu. To hide the blackboard click HIDE in the top menu.
  - Hold down mouse to draw. Type letters to write where the mouse is pointing. Click the screen to change the text location.
 -  Click E to erase the blackboard. Click colors to switch colors. Click the plus and minus to change the size of the pen.
