@@ -109,17 +109,12 @@ void draw() {
 void keyPressed() {
 	if (key == CODED) {
 	} else {
-		if (key == '^') {
-			if (exMode = 'on') {
-				ts = regTS;
-				typeCursorY = typeCursorY + ts*xh;
-				exMode = 'off';
-				
-			} else {
-				ts = exSize;
-				typeCursorY = typeCursorY - ts*xh;
-				exMode = 'on';
-			}
+		if (key == '_') {
+			typeCursorY = typeCursorY + ts*xh;
+
+		} else if (key == '^') {
+			typeCursorY = typeCursorY - ts*xh;
+
 		} else {
 			letter = key;
 			type = true;
