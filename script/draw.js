@@ -14,6 +14,7 @@ var exMode = 'off'; // exponent Mode
 var exSize = 20; // exponentSize
 var regTS = 40; // regular text size
 var ts = regTS;	// text size
+var backspace = false;
 
 
 
@@ -78,14 +79,14 @@ void draw() {
     textSize(.8*bs);
     text(brushSize, w-.9*bs,7*bs);  
 
-	//eraser
+	//erasers
 	stroke(0,0,0);
 	fill(0,0,0);
 	rect(w-bs,8*bs,bs,bs);
 	fill(255,0,0);
-    textSize(.8*bs);
-    text("e", w-.9*bs, 8.8*bs);  
-    text("E", w-.9*bs, 10*bs);  
+	textSize(.8*bs);
+	text("e", w-.9*bs, 8.8*bs);  
+	text("E", w-.9*bs, 10*bs);  
 
 	if (isDraw === 1) {
 		noStroke();
@@ -101,6 +102,12 @@ void draw() {
 		textFont("Courier New");
 		type = false;
 		}
+	
+	if (backspace) {
+		fill(color(0,0,0));
+		rect(typeCursorX, typeCursorY, ts, ts);
+		backspace = false;
+		}
 
 
 }
@@ -108,6 +115,10 @@ void draw() {
 
 void keyPressed() {
 	if (key == CODED) {
+		if (keycode == BACKSPACE) {
+			backspace = true;
+			typeCursorX -= ts;
+		}
 	} else {
 		if (key == '_') {
 			typeCursorY = typeCursorY + ts*xh;
@@ -187,7 +198,7 @@ void mousePressed() {
 		
 		// ssmall eraser
 		if (mouseY > 8*bs && mouseY < 9.5*bs) {
-		    brushSize = brushSize*10;
+		    //brushSize = brushSize*10;
 		    paintColor = color(0,0,0);
 		}
 		
